@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2021 at 01:48 PM
+-- Generation Time: Jan 25, 2021 at 12:53 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `enquiries` (
   `id` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp(),
   `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(2048) NOT NULL,
-  `message` varchar(2048) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(2048) DEFAULT NULL,
+  `message` varchar(2048) DEFAULT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'new'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -65,28 +65,6 @@ INSERT INTO `events` (`id`, `img_src`, `heading`, `descr`, `date`, `slug`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `farmer_reg`
---
-
-CREATE TABLE `farmer_reg` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `phone` varchar(50) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `occupation` varchar(50) NOT NULL,
-  `address` varchar(250) NOT NULL,
-  `capacity` varchar(50) NOT NULL,
-  `land` varchar(50) NOT NULL,
-  `soil` varchar(50) NOT NULL,
-  `source` varchar(50) NOT NULL,
-  `products` varchar(500) NOT NULL,
-  `level` varchar(50) NOT NULL,
-  `date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `feedbacks`
 --
 
@@ -94,16 +72,9 @@ CREATE TABLE `feedbacks` (
   `id` int(11) NOT NULL,
   `img_src` varchar(1024) NOT NULL,
   `content` varchar(2048) NOT NULL,
-  `name` varchar(100) NOT NULL
+  `name` varchar(100) NOT NULL,
+  `desig` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `feedbacks`
---
-
-INSERT INTO `feedbacks` (`id`, `img_src`, `content`, `name`) VALUES
-(1, '', 'I recommend Ramraj’s services as they provide a great platform for the farmers and industrial buyers. ', 'Bhaskar Joshi'),
-(2, '', 'An excellent initiative in the direction of the welfare of rural section of the society. They form the foundation of the society and strengthening them will strengthen the nation as a whole. ', ' Garuna Singh');
 
 -- --------------------------------------------------------
 
@@ -127,7 +98,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `pwd`, `fname`, `lname`, `email`, `status`, `role`) VALUES
-(1, 'adminrrs', '$2y$10$NG9k47y4y8qJWOCKYyd30O45/c2GWe3p2SnMYYVr7W5QWqUwwbUaW', 'Aller', 'Admin', 'info@aller.in', '1', 'admin');
+(1, 'admin_aller', '$2y$10$OGvSKg8m2Ms7shtVwMfiUOMSOSnQ4nWucumY9nMrx5oZQhvDGxoca', 'Aller', 'Admin', 'info@aller.in', '1', 'admin');
 
 -- --------------------------------------------------------
 
@@ -154,7 +125,7 @@ CREATE TABLE `webprofile` (
 --
 
 INSERT INTO `webprofile` (`id`, `email`, `phone1`, `phone2`, `whatsapp_no`, `address_line1`, `address_line2`, `fblink`, `linkedinlink`, `twitterlink`, `youtubelink`) VALUES
-(1, 'info@aller.in', '020-27486770 ', '9765918881', '9765918881', 'Esha House, Shree Datta Marg,\r\nSudarshan Nagar,\r\nNear Golande Ram Temple,\r\nChinchwad, Pune,\r\nMaharashtra 411033', '', 'https://www.facebook.com/', 'https://instagram.com', 'https://twitter.com', '');
+(1, 'info@aller.in', '020-27486770', '9765918881', ' 9765918881', 'Esha House, Shree Datta Marg,\r\nSudarshan Nagar,\r\nNear Golande Ram Temple,\r\nChinchwad, Pune,\r\nMaharashtra 411033', '', 'https://www.facebook.com/', 'https://linkedin.com', 'https://twitter.com', '');
 
 --
 -- Indexes for dumped tables
@@ -170,12 +141,6 @@ ALTER TABLE `enquiries`
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `farmer_reg`
---
-ALTER TABLE `farmer_reg`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -204,7 +169,7 @@ ALTER TABLE `webprofile`
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -213,16 +178,10 @@ ALTER TABLE `events`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `farmer_reg`
---
-ALTER TABLE `farmer_reg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
