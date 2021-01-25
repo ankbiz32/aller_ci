@@ -55,8 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route[''] = 'Home';
+$route['blog'] = 'Home/blog';
+$route['about-us'] = 'Home/about';
 $route['contact'] = 'Home/contact';
 $route['services'] = 'Home/services';
 $route['trainings'] = 'Home/trainings';
-$route['privacy-policy'] = 'Home/Privacy';
+$route['privacy-policy'] = 'Home/privacy';
 $route['sitemap.xml'] = 'Sitemap';

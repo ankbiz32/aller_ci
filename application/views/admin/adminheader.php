@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TAS | Admin | <?=isset($title)?$title:''?></title>
+  <title> <?= isset($title) ? $title.' | '.APP_NAME.' Admin' : APP_NAME.' Admin' ?></title>
+  <meta name="robots" content="noindex">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1381A5">
+  <link rel="shortcut icon" href="<?=base_url()?>assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?=base_url()?>assets/favicon.ico" sizes="32x32" type="image/png">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="<?=base_url('assets/plugins/fontawesome-free/css/all.css')?>">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="<?=base_url('assets/plugins/fontawesome-free/css/all.css')?>"> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
   <!-- DataTables -->
@@ -17,7 +22,11 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- jQuery -->
   <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
-  
+  <style>
+    html{
+      font-size:90%;
+    }
+  </style>
   
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">

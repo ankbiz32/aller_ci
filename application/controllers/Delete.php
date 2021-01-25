@@ -11,6 +11,20 @@ class Delete extends MY_Controller {
         }
 
         // Delete Slider
+        public function Enquiry($id)
+        {
+            $status= $this->delete->deleteInfo($id, 'enquiries');
+            if($status){
+                $this->session->set_flashdata('success','Enquiry deleted!');
+                redirect('Admin');
+            }
+            else{
+                $this->session->set_flashdata('failed','Error!');
+                redirect('Admin');
+            }
+        }
+
+        // Delete Slider
         public function Slide($id)
         {
             
@@ -95,9 +109,12 @@ class Delete extends MY_Controller {
         // Delete Feedbacks
         public function Feedback($id)
         {
+            $d= $this->fetch->getInfoById($id, 'feedbacks');
+            $path= 'assets/clients/'.$d->img_src;
             $status= $this->delete->deleteInfo($id, 'feedbacks');
             if($status){
-                $this->session->set_flashdata('success','Success Story deleted!');
+                unlink("$path");
+                $this->session->set_flashdata('success','Feedback deleted!');
                 redirect('Admin/Feedbacks');
             }
             else{

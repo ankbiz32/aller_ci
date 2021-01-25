@@ -173,13 +173,38 @@ class Edit extends MY_Controller {
             }
         }
 
+    
+
         public function Feedback($id)
         {
             $data=$this->input->post();
+            $path=null;
+            if($_FILES['img']['name']!=null){
+                $path ='assets/clients';
+                $initialize = array(
+                    "upload_path" => $path,
+                    "allowed_types" => "jpg|jpeg|png|bmp|webp|gif",
+                    "remove_spaces" => TRUE,
+                    "max_size" => 600
+                );
+                $this->load->library('upload', $initialize);
+                if (!$this->upload->do_upload('img')) {
+                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors() ) );
+                    redirect('Admin/Feedbacks');
+                } 
+                else {
+                    $imgdata = $this->upload->data();
+                    $data['img_src'] = $imgdata['file_name'];
+                    $d= $this->fetch->getInfoById($id,'feedbacks');
+                    $path= 'assets/clients/'.$d->img_src;
+                }
+            }
             $status= $this->edit->updateInfo($data, $id, 'feedbacks');
             if($status){
-                unlink($path);
-                $this->session->set_flashdata('success','Success Story Updated !');
+                if($path){
+                    unlink($path);
+                }
+                $this->session->set_flashdata('success','Feedback Updated !');
                 redirect('Admin/Feedbacks');
             }
             else{

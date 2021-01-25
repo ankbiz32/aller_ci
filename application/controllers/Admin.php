@@ -11,45 +11,28 @@ class Admin extends MY_Controller {
 
         public function index()
         {
-                $fr=$this->fetch->getInfo('farmer_reg');
-                $this->load->view('admin/adminheader',['title'=>'Farmer Reg','fr' => $fr]); 
+                $data=$this->fetch->getInfo('enquiries');
+                $this->load->view('admin/adminheader',['title'=>'Enquiries', 'data'=>$data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/dashboard'); 
                 $this->load->view('admin/adminfooter');  
         }
-        public function PartnerReg()
-        {
-                $pr=$this->fetch->getRegInfo();
-                $this->load->view('admin/adminheader',['title'=>'Partner Reg','pr' => $pr]); 
-                $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/partner_reg'); 
-                $this->load->view('admin/adminfooter');  
-        }
 
-        public function Hero_sliders()
+        public function Trainings()
         {
-                $data=$this->fetch->getInfo('hero_slider');
+                $data=$this->fetch->getInfo('feedbacks');
                 $this->load->view('admin/adminheader',['data' => $data]); 
                 $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/sliders'); 
+                $this->load->view('admin/trainings'); 
                 $this->load->view('admin/adminfooter');  
-        }
+        }  
 
-        public function Roles()
+        public function Portfolio()
         {
-                $roles=$this->fetch->getInfo('reg_roles');
-                $this->load->view('admin/adminheader',['title'=>'Roles','data'=>$roles]); 
-                $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/roles'); 
-                $this->load->view('admin/adminfooter');  
-        }
-
-        public function Events()
-        {
-                $data=$this->fetch->getInfo('events');
+                $data=$this->fetch->getInfoByOrder('products');
                 $this->load->view('admin/adminheader',['data' => $data]); 
                 $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/events'); 
+                $this->load->view('admin/portfolio'); 
                 $this->load->view('admin/adminfooter');  
         }
 
@@ -62,52 +45,25 @@ class Admin extends MY_Controller {
                 $this->load->view('admin/adminfooter');  
         }
 
-        
-        public function Services()
+        public function Clients()
         {
                 $data=$this->fetch->getInfoByOrder('services');
                 $this->load->view('admin/adminheader',['data' => $data]); 
                 $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/services'); 
+                $this->load->view('admin/clients'); 
                 $this->load->view('admin/adminfooter');  
         }
+
         
-        public function Products()
-        {
-                $data=$this->fetch->getInfoByOrder('products');
-                $this->load->view('admin/adminheader',['data' => $data]); 
-                $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/products'); 
-                $this->load->view('admin/adminfooter');  
-        }
-        
-        public function Schemes()
+        public function Video()
         {
                 $data=$this->fetch->getInfoByOrder('schemes');
                 $this->load->view('admin/adminheader',['data' => $data]); 
                 $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/schemes'); 
+                $this->load->view('admin/video'); 
                 $this->load->view('admin/adminfooter');  
         }
         
-        public function Projects()
-        {
-                $data=$this->fetch->getInfoByOrder('projects');
-                $this->load->view('admin/adminheader',['data' => $data]); 
-                $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/projects'); 
-                $this->load->view('admin/adminfooter');  
-        }
-
-        public function Gallery()
-        {
-                $data=$this->fetch->getInfoByOrder('gallery');
-                $this->load->view('admin/adminheader',['data' => $data]); 
-                $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/gallery'); 
-                $this->load->view('admin/adminfooter');  
-        }
-
         public function editableImages()
         {
                 $this->load->view('admin/adminheader'); 
@@ -134,66 +90,13 @@ class Admin extends MY_Controller {
                 $this->load->view('admin/adminfooter');  
         }
 
-        public function RegDetails()
-        {
-                $data=$this->fetch->getInfoById($this->input->post('id'),'farmer_reg');
-                $response='
-                        <div class="row mb-3 px-2">
-                                <div class="col-md-6"><strong>Name:</strong> '.$data->name.'</div>
-                                <div class="col-md-6"><strong>Phone:</strong> '.$data->phone.'</div>
-                                <div class="col-md-6"><strong>City:</strong> '.$data->city.'</div>
-                                <div class="col-md-6"><strong>Address:</strong> '.$data->address.'</div>
-                        </div>
-                        <div class="row mb-3 bg-light py-3 px-2">
-                                <div class="col-md-6"><strong>Occupation:</strong> '.$data->occupation.'</div>
-                                <div class="col-md-6"><strong>Capacity:</strong> '.$data->capacity.'</div>
-                                <div class="col-md-6"><strong>Land:</strong> '.$data->land.'</div>
-                        </div>
-                        <div class="row px-2">
-                                <div class="col-md-6"><strong>Soil:</strong> '.$data->soil.'</div>
-                                <div class="col-md-6"><strong>Source:</strong> '.$data->source.'</div>
-                                <div class="col-md-6"><strong>Products:</strong> '.$data->products.'</div>
-                                <div class="col-md-6"><strong>Level:</strong> '.$data->level.'</div>
-                        </div>
-                ';
-                echo $response;
-                exit; 
-        }
-
-        public function pRegDetails()
-        {
-                $data=$this->fetch->getRegInfoById($this->input->post('id'));
-                $response='
-                        <div class="row mb-3 bg-light py-3 px-2">
-                                <div class="col-md-8"><strong>Reg type:</strong><br>'.$data->role.'</div>
-                                <div class="col-md-4"><strong>Date:</strong><br>'.date('d-m-Y',strtotime($data->date)).'</div>
-                        </div>  
-                        <div class="row mb-3">
-                                <div class="col-md-4"><strong>Name:</strong><br>'.$data->pname.'</div>
-                                <div class="col-md-4"><strong>Contact:</strong><br>'.$data->phone.'</div>
-                                <div class="col-md-4"><strong>E-mail:</strong><br>'.$data->email.'</div>
-                        </div>  
-                        <div class="row mb-3">
-                                <div class="col-md-4"><strong>State:</strong><br>'.$data->state_name.'</div>
-                                <div class="col-md-4"><strong>City:</strong><br>'.$data->name.'</div>
-                                <div class="col-md-4"><strong>Pin code:</strong><br>'.$data->pin.'</div>
-                        </div>  
-                        <div class="row mb-3">
-                                <div class="col-md-4"><strong>Address:</strong><br>'.$data->address.'</div>
-                        </div>  
-                        <div class="row mb-3 bg-light py-3 px-2">
-                                <div class="col-md-4"><strong>Firm name:</strong><br>'.$data->firm_name.'</div>
-                                <div class="col-md-4"><strong>Firm address:</strong><br>'.$data->firm_address.'</div>
-                        </div>  
-                                <div class="row mb-3">
-                                <div class="col-md-6"><strong>Remarks:</strong><br>'.$data->remarks.'</div>
-                        </div>  
-                ';
-                echo $response;
-                exit; 
-        }
 
 
+        
+
+
+
+        // ----------------------------- Root User ------------------------------------
 
         public function rootLogin()
         {

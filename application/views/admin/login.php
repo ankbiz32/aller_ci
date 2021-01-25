@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>TAS Admin | Log in</title>
+  <title>Log in | <?=APP_NAME?> Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
+  <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1381A5">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -13,11 +15,13 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="shortcut icon" href="<?=base_url()?>assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?=base_url()?>assets/favicon.ico" sizes="32x32" type="image/png">
 </head>
 <body class="hold-transition login-page ">
 <div class="login-box">
   <div class="login-logo">
-    <a href="<?=base_url()?>" target="_blank"><img src="<?=base_url()?>assets/images/Total AgriSolutions logo.png" height="50" alt="Ramraj Services Logo"></a> <br>
+    <a href="<?=base_url()?>" target="_blank"><img src="<?=base_url()?>assets/images/logo.png" height="80" alt="Logo"></a> <br> <br>
       <b>Admin</b>
   </div>
   <!-- /.login-logo -->

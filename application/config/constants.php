@@ -86,3 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 // Custom Constants
 defined('ROOT_PWD')      OR define('ROOT_PWD', '502Ank'); // Root login password
+defined('APP_NAME')      OR define('APP_NAME', 'Aller'); // Root login password

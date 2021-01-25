@@ -11,10 +11,7 @@
                                 <span class="material-icons">location_on</span> <strong>&nbsp; ADDRESS</strong>
                             </div>
                             <p>
-                                Esha House, Shree Datta Marg, <br>
-                                Sudarshan Nagar, <br>
-                                Near Golande Ram Temple, <br>
-                                Chinchwad, Pune, <br> Maharashtra 411033
+                                <?=nl2br($web->address_line1)?>
                             </p>
                         </div>
 
@@ -23,7 +20,7 @@
                                 <span class="material-icons">email</span><strong>&nbsp; E-MAIL</strong>
                             </div>
                             <p>
-                                info@aller.in
+                            <?=$web->email?>
                             </p>
                         </div>
 
@@ -33,7 +30,9 @@
                                 <strong>&nbsp; CONTACT NO.</strong>
                             </div>
                             <p>
-                                020-27486770 <br> 9765918881
+                                
+                            <?=$web->phone1?> <br> 
+                            <?=$web->phone2?>
                             </p>
                         </div>
 
@@ -59,21 +58,22 @@
                 <div class="row main-row flex-wrap-reverse">
                     <div class="col-md-7">
                         <h1 class="lato mb-5 text-black">Start a new project</h1>
-                        <form class="" action="#">
+                        <form class="" action="<?=base_url('Home/enquiry')?>" method="POST">
                             <div class="row justify-content-between flex-sm-nowrap">
                                 <div class="col-md-6 mb-sm-0 mb-4 float-group">
-                                    <input name="name" type="text" class="" required>
-                                    <label for="pname">Name *</label>
+                                    <input name="name" type="text" class="" id="name" required>
+                                    <label for="name">Name *</label>
                                 </div>
                                 <div class="col-md-6 float-group">
-                                    <input name="email" type="text" required>
-                                    <label for="pname">Email *</label>
+                                    <input name="email" type="email" id="email" required>
+                                    <label for="email">Email *</label>
                                 </div>
                             </div>
                             <div class="row mt-4 mb-5">
                                 <div class="col float-group">
-                                    <textarea name="message" rows="5"></textarea>
-                                    <label for="pname">Enter your message here</label>
+                                    <textarea name="message" id="message" rows="5" required maxlength='300'></textarea>
+                                    <label for="message">Enter your message here *</label>
+                                <small class="d-block text-right mt-1"><small>** Max. 300 characters</small></small>
                                 </div>
                             </div>
                             <button href="" class="btn bg-blue text-white js-tilt">
@@ -92,19 +92,21 @@
    <footer class="bg-blue pt-5 pb-3">
        <div class="container">
         <div class="row flex-sm-nowrap align-items-center">
-            <div class="col-sm-4 text-sm-left text-center">
+            <div class="col-sm-3     text-sm-left text-center">
                 <a href="" class="bg-light d-inline-block py-2 px-4 footer-logo">
                     <img src="<?=base_url()?>assets/brand/aller_logo.png" height="60" alt="Logo">
                 </a>
             </div>
-            <div class="col-sm-8 text-sm-right text-center mt-sm-0 mt-4">
+            <div class="col-sm-9 text-sm-right text-center mt-sm-0 mt-4">
                 <div class="links mt-2">
-                    <a href="" class="mr-4 mb-3 d-inline-block text-white">Home</a>
-                    <a href="" class="mr-4 mb-3 d-inline-block text-white">Collaboration</a>
-                    <a href="" class="mr-4 mb-3 d-inline-block text-white">Careers</a>
-                    <a href="" class="mr-4 mb-3 d-inline-block text-white">Blogs</a>
-                    <a href="" class="mr-4 mb-3 d-inline-block text-white">Training</a>
-                    <a href="" class="text-white">Contact us</a>
+                    <a href="<?=base_url()?>" class="mr-4 mb-3 d-inline-block text-white">Home</a>
+                    <!-- <a href="<?=base_url('about-us')?><?=base_url()?>" class="mr-4 mb-3 d-inline-block text-white">About</a> -->
+                    <a href="<?=base_url('services')?>" class="mr-4 mb-3 d-inline-block text-white">Services</a>
+                    <a href="<?=base_url('trainings')?>" class="mr-4 mb-3 d-inline-block text-white">Trainings</a>
+                    <!-- <a href="<?=base_url('blog')?>" class="mr-4 mb-3 d-inline-block text-white">Blogs</a> -->
+                    <!-- <a href="<?=base_url('portfolio')?>" class="mr-4 mb-3 d-inline-block text-white">Portfolio</a> -->
+                    <a href="<?=base_url('contact')?>" class="mr-4 mb-3 d-inline-block text-white">Contact us</a>
+                    <a href="<?=base_url('privacy-policy')?>" class="text-white">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -113,10 +115,18 @@
 
         <div class="row flex-sm-nowrap flex-wrap align-items-center text-white mt-sm-0 mt-4">
             <div class="col-sm-8">
-                <p class="mb-0 text-sm-left text-center">&copy; ALLER TECHNOLOGIES 2020 - All rights reserved</p>
+                <p class="mb-0 text-sm-left text-center">&copy; <?=date('Y')?> ALLER TECHNOLOGIES - All rights reserved</p>
             </div>
             <div class="col-sm-4 text-sm-right text-center mt-sm-0 mt-3">
-                <a href="" class="text-white">Privacy policy</a>
+                    <a href="<?=$web->fblink?>" target="_blank" class="">
+                        <img src="<?=base_url()?>assets/facebook-w.svg" height="30" alt="Fb">
+                    </a>
+                    <a href="<?=$web->twitterlink?>" target="_blank" class="mx-4">
+                        <img src="<?=base_url()?>assets/twitter-w.svg" height="30" alt="twitter">
+                    </a>
+                    <a href="<?=$web->linkedinlink?>" target="_blank" class="">
+                        <img src="<?=base_url()?>assets/linkedin-w.svg" height="30" alt="LinkedIn">
+                    </a>
             </div>
         </div>
        </div>
@@ -204,7 +214,7 @@
         $(document).ready(function(){
             const Toast = Swal.mixin({
                 showConfirmButton: false,
-                timer: 3000
+                timer: 10000
             });
 
             <?php if($this->session->flashdata('success') || $message = $this->session->flashdata('failed')):

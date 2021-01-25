@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark"><i class="fa fa-comment-dots"></i>&nbsp;&nbsp;Success Stories (Feedbacks)</h1>
+                <h1 class="m-0 text-dark"><i class="fa fa-comment-dots"></i>&nbsp;&nbsp;Feedbacks</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="<?=base_url('Admin')?>">Dashboard</a></li>
-                  <li class="breadcrumb-item active">Success stories</li>
+                  <li class="breadcrumb-item active">Feedbacks</li>
                 </ol>
             </div><!-- /.col -->
             </div><!-- /.row -->
@@ -35,7 +35,8 @@
                   <thead>
                     <tr>
                       <th>Feedback</th>
-                      <th>Name</th>
+                      <th>Feedback</th>
+                      <th>Name & designation</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -43,8 +44,9 @@
                     <!-- display Data-->
                     <?php foreach ($data as $d){?>
                       <tr>
+                        <td class=""><img src="<?=base_url('assets/clients/').$d->img_src?>" alt="" height="50"></td>
                         <td><?=substr($d->content,0,100)." . . ."?></td>
-                        <td class=""><?=$d->name?></td>
+                        <td class=""><?=$d->name?> <br><small>(<?=$d->desig?>)</small> </td>
                         <td>
                           <a href="<?=base_url('Delete/Feedback/'.$d->id)?>" onclick="confirmation(event)" class="btn del-btn btn-danger mb-1" title="Delete Feedback"><i class="fa fa-trash-alt"></i></a>
                           <button class="btn btn-primary mb-1" data-toggle="modal" data-target="#edit<?=$d->id?>" title="Edit Feedback"><i class="fa fa-edit"></i></button>
@@ -62,7 +64,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form role="form" method="post" action="<?php echo base_url();?>Edit/Feedback/<?=$d->id?>" enctype="multipart/form-data">
+                                    <form role="form" method="post" action="<?=base_url()?>Edit/Feedback/<?=$d->id?>" enctype="multipart/form-data">
                                       <div class="col">
                                       <div class="form-group">
                                             <label for="content" class="m-0">Feedback:</label>
@@ -70,9 +72,22 @@
                                             <textarea name="content" id="content" minlength="1" maxlength="200" class="form-control mt-2" rows="5" required><?=$d->content?></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="name" class="m-0">Name:</label>
-                                            <p class="text-sm text-muted m-0">(Max. 20 Characters)</p>
-                                            <input type="text" class="form-control mt-2" minlength="1" maxlength="20" name="name" value="<?=$d->name?>" id="name" required>
+                                            <label for="name" class="m-0">Person name:</label>
+                                            <p class="text-sm text-muted m-0">(Max. 40 Characters)</p>
+                                            <input type="text" class="form-control mt-2" minlength="1" maxlength="40" name="name" value="<?=$d->name?>" id="name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name" class="m-0">Designation:</label>
+                                            <input type="text" class="form-control mt-2" minlength="1" maxlength="100" name="desig" value="<?=$d->desig?>" id="desig" required>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="img" class="m-0">Person image:</label>
+                                          <p class="m-0 text-muted">( Choose only if you want to change the current image )</p>
+                                          <p class="text-sm text-muted mt-0 mb-2">( Max image size : 500kb )</p>
+                                          <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="img" name="img">
+                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                          </div>
                                         </div>
                                       </div>
                                 </div>
@@ -115,7 +130,7 @@
             </button>
         </div>
         <div class="modal-body">
-            <form role="form" method="post" action="<?php echo base_url();?>Add/Feedback" enctype="multipart/form-data">
+            <form role="form" method="post" action="<?=base_url();?>Add/Feedback" enctype="multipart/form-data">
               <div class="col">
                 <div class="form-group">
                     <label for="content" class="m-0">Feedback: *</label>
@@ -124,8 +139,20 @@
                 </div>
                 <div class="form-group">
                     <label for="name" class="m-0">Name: *</label>
-                    <p class="text-sm text-muted">(Max. 20 Characters)</p>
-                    <input type="text" class="form-control" name="name" maxlength="20" id="name" required>
+                    <p class="text-sm text-muted">(Max. 40 Characters)</p>
+                    <input type="text" class="form-control" name="name" maxlength="40" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="m-0">Designation:</label>
+                    <input type="text" class="form-control mt-2" minlength="1" maxlength="100" name="desig" id="desig" required>
+                </div>
+                <div class="form-group">
+                  <label for="img" class="mb-2">Person image:</label>
+                  <p class="text-sm text-muted mt-0 mb-2">( Max image size : 500kb )</p>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input m-0" id="img" name="img" required>
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
                 </div>
               </div>
         </div>

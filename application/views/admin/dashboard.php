@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0 text-dark"><i class="fa fa-user"></i>&nbsp;Farmer Registrations</h1>
+                <h1 class="m-0 text-dark"><i class="fa fa-list"></i>&nbsp; Enquiries</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -31,26 +31,25 @@
                 <table id="bookdt" class="table table-bordered table-hover" style="width:100%;">
                   <thead>
                     <tr>
-                      <th>Reg. Date</th>
+                      <th>S. No.</th>
+                      <th>Enq. Date</th>
                       <th>Name</th>
-                      <th>Phone</th>
-                      <th>City</th>
-                      <th>Adress</th>
+                      <th>Email</th>
+                      <th>Message</th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
                     <!-- display Enquiries-->
-                    <?php foreach($fr as $f){?>
+                    <?php foreach($data as $f){?>
                       <tr>
+                        <td><?=$f->id?></td>
                         <td><?=date("d-m-Y",strtotime("$f->date"))?></td>
                         <td><?=$f->name?></td>
-                        <td><?=$f->phone?></td>
-                        <td><?=$f->city?></td>
-                        <td><?=$f->address?></td>
+                        <td><?=$f->email?></td>
+                        <td><?=nl2br($f->message)?></td>
                         <td>
-                          <a href="<?=base_url('Delete/Farmer_reg/'.$f->id)?>" onclick="confirmation(event)" class="btn del-btn btn-danger my-1" title="Delete Registration"><i class="fa fa-trash-alt"></i></a>
-                          <button data-id='<?=$f->id?>' title="Registration details" class="btn btn-warning text-bold regDet"><i class="fa fa-info"></i></button>
+                          <a href="<?=base_url('Delete/Enquiry/'.$f->id)?>" onclick="confirmation(event)" class="btn del-btn btn-danger btn-sm my-1" title="Delete enquiry"><i class="fa fa-trash-alt"></i></a>
                         </td>
                       </tr>
                     <?php }?>
@@ -61,29 +60,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Reg details modal -->
-            <div class="modal fade" id="details">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Registration details:</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                            
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-        <!-- /Reg details modal -->
 
       </div><!-- /.container-fluid -->
     </div>
@@ -113,28 +89,9 @@
       "info": true,
       "autoWidth": true,
       "scrollX": true,
-      "order": [[ 5, "asc" ]]
+      "order": [[ 0, "desc" ]]
     });
   });
 
-  $(function () {
-    $('.regDet').click(function(){
-      var id=$(this).data('id');
-      $.ajax({
-          url: '<?=base_url('Admin/RegDetails')?>',
-          type:'post',
-          data: {id: id},
-          beforeSend : function(){
-              $('.modal-body').html('<i class="fa fa-spinner fa-spin"></i>');
-              $('#details').modal('show');
-          },
-          success: function(response){
-              $('.modal-body').html(response);
-          },
-          error: function(response){
-              $('.modal-body').html('Error');
-          }
-      });
-    });
-  });
+
 </script>

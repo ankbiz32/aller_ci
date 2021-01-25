@@ -1,10 +1,10 @@
 <footer class="main-footer px-5">
     <div class="row">
       <p>
-        <strong>Copyright &copy; 2020.</strong>
+        <strong>Copyright &copy; <?=date('Y')?>.</strong>
         All rights reserved.
       </p>
-      <p class="ml-auto">Powered by: <a href="https://cluebix.com" class="text-bold" target=_blank>Cluebix Software</a></p>
+      <p class="ml-auto">Powered by: <a href="http://digikraftsocial.com" class="text-bold" target=_blank>DigiKraft Social</a></p>
     </div>
 </footer>
 
