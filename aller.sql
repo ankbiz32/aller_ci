@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2021 at 12:53 PM
+-- Generation Time: Jan 26, 2021 at 09:09 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -24,6 +24,18 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `clients`
+--
+
+CREATE TABLE `clients` (
+  `id` int(11) NOT NULL,
+  `img_src` varchar(500) NOT NULL,
+  `name` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `enquiries`
 --
 
@@ -40,31 +52,6 @@ CREATE TABLE `enquiries` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `events`
---
-
-CREATE TABLE `events` (
-  `id` int(11) NOT NULL,
-  `img_src` varchar(1024) NOT NULL,
-  `heading` varchar(1024) NOT NULL,
-  `descr` varchar(2048) NOT NULL,
-  `date` date NOT NULL,
-  `slug` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `events`
---
-
-INSERT INTO `events` (`id`, `img_src`, `heading`, `descr`, `date`, `slug`) VALUES
-(1, 'e1.png', 'Some events heading will be shown here 1', 'Something about the event. A small description for the image like a seminar held at some place.', '2020-05-03', 'Some-events-heading-will-be-shown-here-1'),
-(2, 'e2.png', 'Another Event', ' Something about the event. A small description for the image like a seminar held at some place.Something about the event. A small description for the image like a seminar held at some place.', '2020-05-04', 'Another-Event'),
-(3, 'e3.png', 'Yet Another Event', 'Something about the event. A small description for the image like a seminar held at some place.', '2020-04-07', 'Yet-Another-Event'),
-(5, 'agriculture-clouds-corn-corn-field-539282.jpg', 'Analysis in today\'s world', 'Test', '2020-05-03', 'Analysis-in-todays-world');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `feedbacks`
 --
 
@@ -75,6 +62,50 @@ CREATE TABLE `feedbacks` (
   `name` varchar(100) NOT NULL,
   `desig` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portfolio`
+--
+
+CREATE TABLE `portfolio` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `descr` text NOT NULL,
+  `img_src1` varchar(200) NOT NULL,
+  `img_src2` varchar(200) NOT NULL,
+  `img_src3` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `services`
+--
+
+CREATE TABLE `services` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `descr` text NOT NULL,
+  `img_src` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainings`
+--
+
+CREATE TABLE `trainings` (
+  `id` int(11) NOT NULL,
+  `img_src` varchar(500) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `descr` text NOT NULL,
+  `duration` varchar(200) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -132,21 +163,39 @@ INSERT INTO `webprofile` (`id`, `email`, `phone1`, `phone2`, `whatsapp_no`, `add
 --
 
 --
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `enquiries`
 --
 ALTER TABLE `enquiries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `portfolio`
+--
+ALTER TABLE `portfolio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `trainings`
+--
+ALTER TABLE `trainings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -166,22 +215,40 @@ ALTER TABLE `webprofile`
 --
 
 --
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `portfolio`
+--
+ALTER TABLE `portfolio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `services`
+--
+ALTER TABLE `services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `trainings`
+--
+ALTER TABLE `trainings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`

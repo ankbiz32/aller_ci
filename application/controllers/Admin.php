@@ -21,7 +21,7 @@ class Admin extends MY_Controller {
         public function Trainings()
         {
                 $data=$this->fetch->getInfo('feedbacks');
-                $this->load->view('admin/adminheader',['data' => $data]); 
+                $this->load->view('admin/adminheader',['title'=>'Trainings', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/trainings'); 
                 $this->load->view('admin/adminfooter');  
@@ -30,7 +30,7 @@ class Admin extends MY_Controller {
         public function Portfolio()
         {
                 $data=$this->fetch->getInfoByOrder('products');
-                $this->load->view('admin/adminheader',['data' => $data]); 
+                $this->load->view('admin/adminheader',['title'=>'Portfolio', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/portfolio'); 
                 $this->load->view('admin/adminfooter');  
@@ -39,7 +39,7 @@ class Admin extends MY_Controller {
         public function Feedbacks()
         {
                 $data=$this->fetch->getInfo('feedbacks');
-                $this->load->view('admin/adminheader',['data' => $data]); 
+                $this->load->view('admin/adminheader',['title'=>'Feedbacks', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/feedbacks'); 
                 $this->load->view('admin/adminfooter');  
@@ -47,8 +47,8 @@ class Admin extends MY_Controller {
 
         public function Clients()
         {
-                $data=$this->fetch->getInfoByOrder('services');
-                $this->load->view('admin/adminheader',['data' => $data]); 
+                $data=$this->fetch->getInfoByOrder('clients');
+                $this->load->view('admin/adminheader',['title'=>'Clients', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/clients'); 
                 $this->load->view('admin/adminfooter');  
@@ -58,7 +58,7 @@ class Admin extends MY_Controller {
         public function Video()
         {
                 $data=$this->fetch->getInfoByOrder('schemes');
-                $this->load->view('admin/adminheader',['data' => $data]); 
+                $this->load->view('admin/adminheader',['title'=>'Video', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/video'); 
                 $this->load->view('admin/adminfooter');  
@@ -66,6 +66,7 @@ class Admin extends MY_Controller {
         
         public function editableImages()
         {
+                $this->load->view('admin/adminheader',['title'=>'Editable images']); 
                 $this->load->view('admin/adminheader'); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/header_images'); 
@@ -75,7 +76,7 @@ class Admin extends MY_Controller {
         public function webProfile()
         {
                 $profile=$this->fetch->getWebProfile();
-                $this->load->view('admin/adminheader', ['profile' => $profile]); 
+                $this->load->view('admin/adminheader', ['title'=>'Web profile','profile' => $profile]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/webProfile'); 
                 $this->load->view('admin/adminfooter');  
@@ -84,7 +85,7 @@ class Admin extends MY_Controller {
         public function adminProfile()
         {
                 $admProfile=$this->fetch->getAdminProfile();
-                $this->load->view('admin/adminheader', ['admProfile' => $admProfile]); 
+                $this->load->view('admin/adminheader', ['title'=>'Admin profile','admProfile' => $admProfile]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/adminProfile'); 
                 $this->load->view('admin/adminfooter');  

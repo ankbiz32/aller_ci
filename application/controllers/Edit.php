@@ -316,43 +316,44 @@ class Edit extends MY_Controller {
         }
 
 
-        public function Gallery($id)
+        public function Clients($id)
         {
+            $data=$this->input->post();
+            $path=null;
             if($_FILES['img']['name']!=null){
-                $path ='assets/images';
+                $path ='assets/clients';
                 $initialize = array(
                     "upload_path" => $path,
                     "allowed_types" => "jpg|jpeg|png|bmp|webp",
                     "remove_spaces" => TRUE,
-                    "max_size" => 350
+                    "max_size" => 600
                 );
                 $this->load->library('upload', $initialize);
                 if (!$this->upload->do_upload('img')) {
                     $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors()) );
-                    redirect('Admin/Gallery');
+                    redirect('Admin/Clients');
                 }
                 else {
                     $imgdata = $this->upload->data();
                     $imagename = $imgdata['file_name'];
-                    $data=array('img_src'=>$imagename);
-                    $d= $this->fetch->getInfoById($id,'gallery');
-                    $path= 'assets/images/'.$d->img_src;
-                    $status= $this->edit->updateInfo($data,$id, 'gallery');
-                    if($status){
-                        unlink($path);
-                        $this->session->set_flashdata('success','Image Updated!' );
-                        redirect('Admin/Gallery');
-                    }
-                    else{
-                        $this->session->set_flashdata('failed','Error !');
-                        redirect('Admin/Gallery');
-                    }
+                    $data['img_src']=$imagename;
+                    $d= $this->fetch->getInfoById($id,'clients');
+                    $path= 'assets/clients/'.$d->img_src;
                 } 
             }
+
+            $status= $this->edit->updateInfo($data,$id, 'clients');
+            if($status){
+                if($path){
+                    unlink($path);
+                }
+                $this->session->set_flashdata('success','Client Updated!' );
+                redirect('Admin/Clients');
+            }
             else{
-                $this->session->set_flashdata('failed','No image selected !');
-                redirect('Admin/Gallery');
-            } 
+                $this->session->set_flashdata('failed','Error !');
+                redirect('Admin/Clients');
+            }
         }
 
         public function webProfile()

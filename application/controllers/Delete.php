@@ -141,21 +141,21 @@ class Delete extends MY_Controller {
             }
         }
 
-        // Delete Gallery
-        public function Gallery($id)
+        // Delete Clients
+        public function Clients($id)
         {
             
-            $d= $this->fetch->getInfoById($id, 'gallery');
-            $path= 'assets/images/'.$d->img_src;
-            $status= $this->delete->deleteInfo($id, 'gallery');
+            $d = $this->fetch->getInfoById($id, 'clients');
+            $path= 'assets/clients/'.$d->img_src;
+            $status= $this->delete->deleteInfo($id, 'clients');
             if($status){
                 unlink($path);
-                $this->session->set_flashdata('success','Image Deleted!');
-                redirect('Admin/Gallery');
+                $this->session->set_flashdata('success','Client deleted!');
+                redirect('Admin/Clients');
             }
             else{
                 $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Gallery');
+                redirect('Admin/Clients');
             }
         }
 

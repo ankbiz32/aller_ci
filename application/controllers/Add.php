@@ -95,40 +95,40 @@ class Add extends MY_Controller {
             } 
         }
 
-        public function Gallery()
+        public function Client()
         {
             if($_FILES['img']['name']!=null){
-                $path ='assets/images';
+                $path ='assets/clients';
                 $initialize = array(
                     "upload_path" => $path,
                     "allowed_types" => "jpg|jpeg|png|bmp|webp",
                     "remove_spaces" => TRUE,
-                    "max_size" => 350
+                    "max_size" => 600
                 );
                 $this->load->library('upload', $initialize);
                 if (!$this->upload->do_upload('img')) {
                     $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors()) );
-                    redirect('Admin/Gallery');
+                    redirect('Admin/Clients');
                 }
                 else {
                     $imgdata = $this->upload->data();
                     $imagename = $imgdata['file_name'];
-                    $data=array('img_src'=>$imagename);
-                    $status= $this->save->saveInfo($data, 'gallery');
+                    $data=array('img_src'=>$imagename, 'name'=>$this->input->post('name'));
+                    $status= $this->save->saveInfo($data, 'clients');
 
                     if($status){
-                        $this->session->set_flashdata('success','New Image added !' );
-                        redirect('Admin/Gallery');
+                        $this->session->set_flashdata('success','New client added !' );
+                        redirect('Admin/Clients');
                     }
                     else{
                         $this->session->set_flashdata('failed','Error !');
-                        redirect('Admin/Gallery');
+                        redirect('Admin/Clients');
                     }
                 } 
             }
             else{
                 $this->session->set_flashdata('failed','No image selected !');
-                redirect('Admin/Gallery');
+                redirect('Admin/Clients');
             } 
         }
 
