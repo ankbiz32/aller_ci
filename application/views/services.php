@@ -1,12 +1,10 @@
-
-
     <div class="sub-header">
         <div class="lg-img d-sm-block d-none" style="background: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.2)) , url('assets/banners/services-banner.jpg') no-repeat center; background-size: cover;"></div>
         <div class="container">
             <div class="row align-items-center flex-wrap-reverse">
                 <div class="sub-header-content col-sm-6 pl-sm-5 pr-sm-4">
                         <h3 class="lato">Services</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ab sit! Voluptate distinctio aliquid inventore!</p>
+                        <p><strong>Aller</strong> deals with providing customized solutions to our clientele. We believe in providing a tailored approach that helps our clients in yielding the best possible results.</p>
                 </div>
                 <div class="sub-header-img col-sm-6 d-sm-none d-block"  style="background: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.2)) , url('assets/banners/services-banner.jpg') no-repeat center; background-size: cover;">
                 </div>
@@ -47,7 +45,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Web Development</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">Digital presence of a company is known by its website. Our team can convert your idea into reality with the help of creative thought process and their expertise. </p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +85,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Software Applications</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">Software helps in automating business processes with ease and minimum effort. Our team of developers provides practical, flexible, and responsive applications with unmatched results.</p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +130,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Bulk SMS Service</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">SMS Marketing is a traditional and most effective way to convey your message to the target audience. Our Bulk SMS service comes in various competitive packages to match your requirements.</p>
                         </div>
                     </div>
                 </div>
@@ -170,7 +168,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Digital Marketing</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">Reach and engage with your target audience with the help of our experienced team that hits your business objectives efficiently by implementing strategic online campaigns. At Aller, we provide full-fledged Digital Marketing Services based on your unique requirements.</p>
                         </div>
                     </div>
                 </div>
@@ -208,7 +206,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Web designing</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">Get a fully customized website that suits your brand best. Our team can convert your idea into reality with the help of creative thought process and their expertise. </p>
                         </div>
                     </div>
                 </div>
@@ -244,7 +242,7 @@
                         </div>
                         <div class="all-service-txt">
                             <h3 class="lato">Graphic Designing</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus asperiores necessitatibus eos, ullam perferendis tempora nisi, eveniet soluta distinctio praesentium possimus amet voluptate vero eum.</p>
+                            <p class="mb-0">Looking for unique creatives or ad banners? We have got an expert team that can assist in your designing needs with unparalleled results. Reach us to get a quotation now. </p>
                         </div>
                     </div>
                 </div>

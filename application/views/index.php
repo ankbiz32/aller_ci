@@ -10,7 +10,7 @@
                         <span class="d-inline-flex">Explore our portfolio  <i class="material-icons ml-2">arrow_right_alt</i>
                     </a>
                 </div>
-                <div class="header-video xl-header-vid col-md-7 px-0">
+                <div class="header-video xl-header-vid col-md-7 px-0 pb-0">
                      <a href="#" class="play">
                          <svg id="Group_54" data-name="Group 54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106">
                              <circle id="Ellipse_12" data-name="Ellipse 12" cx="30" cy="30" r="30" transform="translate(23 23)" fill="#f7921fcc"/>
@@ -21,7 +21,7 @@
                              <path id="Polygon_4" data-name="Polygon 4" d="M11.25,0,22.5,18H0Z" transform="translate(65.5 41.5) rotate(90)" fill="#fff"/>
                          </svg>
                      </a>
-                     <img src="<?=base_url()?>assets/vid-thumb.png" class="w-100 h-100" style="object-fit: cover; object-position: center;" alt="">
+                     <img src="<?=base_url()?>assets/vid-thumb.png" class="w-100" style="object-fit: cover; object-position: center;" alt="">
                  </div>
            </div>
            <div class="row mt-sm-5 mt-3 header-cards">
@@ -32,8 +32,8 @@
                                <path id="Path_1" data-name="Path 1" d="M409.988.04H406.28a.927.927,0,1,0,0,1.854h3.708a2.781,2.781,0,0,1,2.781,2.781V21.361a.927.927,0,0,0,1.854,0V4.675A4.641,4.641,0,0,0,409.988.04Z" transform="translate(-370.127 -0.037)" fill="#df0d25"/>
                                <path id="Path_2" data-name="Path 2" d="M43.59,25.034h-9.27V4.639a.927.927,0,0,0-.093-.414L32.373.517a.966.966,0,0,0-1.659,0L28.859,4.225a.927.927,0,0,0-.1.414v.927a.927.927,0,1,0,1.854,0V4.858L31.539,3l.927,1.854V25.034H30.611V18.544a.927.927,0,1,0-1.854,0v6.489H26.9V16.69h.927a.927.927,0,0,0,0-1.854H26.9v-.927a3.185,3.185,0,0,1,2.147-2.828.927.927,0,0,0,.537-1.3L24.952.513A.806.806,0,0,0,24.8.3a.908.908,0,0,0-1.355,0,.806.806,0,0,0-.152.209l-4.635,9.27a.933.933,0,0,0,.532,1.292,3.188,3.188,0,0,1,2.152,2.834v.927h-.927a.927.927,0,1,0,0,1.854h.927v8.343H19.487V18.545a.927.927,0,1,0-1.854,0v6.489H12.071V20.4h2.781a.927.927,0,1,0,0-1.854H12.071V15.764h1.854a.927.927,0,0,0,0-1.854H12.071V11.128h2.781a.927.927,0,0,0,0-1.854H12.071V6.493h1.854a.927.927,0,0,0,0-1.854H12.071V1.858h5.562V5.566a.927.927,0,1,0,1.854,0V1.858A1.854,1.854,0,0,0,17.633,0H12.071a1.854,1.854,0,0,0-1.854,1.854V25.034H5.582a.927.927,0,1,0,0,1.854H42.663V30.6a2.781,2.781,0,0,1-2.781,2.781H4.655A2.781,2.781,0,0,1,1.874,30.6V4.639A2.781,2.781,0,0,1,4.655,1.858H7.436A.927.927,0,0,0,7.436,0H4.655A4.641,4.641,0,0,0,.02,4.639V30.6a4.641,4.641,0,0,0,4.635,4.635h10.2V39.37l-2.368,1.576a.927.927,0,0,0-.413.774v.927A1.854,1.854,0,0,0,13.925,44.5H30.611a1.854,1.854,0,0,0,1.854-1.854V41.72a.927.927,0,0,0-.413-.771L29.684,39.37V38.012a.927.927,0,0,0-1.854,0v1.854a.927.927,0,0,0,.413.771l2.368,1.579v.431H13.925v-.431l2.368-1.576a.927.927,0,0,0,.413-.774V35.231H39.881A4.641,4.641,0,0,0,44.516,30.6V25.961A.927.927,0,0,0,43.59,25.034Zm-18.54,0H23.2V16.69h1.854Zm0-11.124v.927H23.2v-.927a4.728,4.728,0,0,0-2.46-4.131L23.2,4.858V9.274a.927.927,0,0,0,1.854,0V4.858l2.46,4.921A4.721,4.721,0,0,0,25.049,13.909Z" transform="translate(-0.02 -0.001)" fill="#df0d25"/>
                            </svg>
-                           <h5 class="lato mb-3 mt-4">Modern technologies</h5>
-                           <small class="d-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et reprehenderit recusandae perferendis quam ab iusto veniam eaque.</small>
+                           <h5 class="lato mb-3 mt-4">Python Training</h5>
+                           <small class="d-block">Whether you are completely new to programming or want to level up, Aller’s Python Training Course is tailored for all levels. This Python training course will provide you hands-on experience for starting or boosting your career as a programmer.</small>
                            <a href="#" class="float-right mt-3 mb-0">
                                <svg id="Arrow-right-red" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#df0d25"/>
@@ -49,8 +49,8 @@
                                <path id="Path_6" data-name="Path 6" d="M7.5,192H1.88A1.875,1.875,0,0,0,0,193.877v24.375a1.836,1.836,0,0,0,1.8,1.875H7.5a1.836,1.836,0,0,0,1.875-1.8c0-.026,0-.052,0-.078V193.877A1.875,1.875,0,0,0,7.5,192Zm0,26.25-5.625-.026v-4.661H3.755a.938.938,0,0,0,0-1.875H1.88V207H4.692a.938.938,0,0,0,0-1.875H1.88v-4.687H3.755a.938.938,0,0,0,0-1.875H1.88v-4.687H7.5v24.375Z" transform="translate(-0.004 -175.127)" fill="#0071d8"/>
                                <path id="Path_7" data-name="Path 7" d="M219.9,160h-5.625a.938.938,0,0,0,0,1.875H219.9v3.75h-5.625a.938.938,0,0,0-.938.938v13.125a.938.938,0,1,0,1.875,0V167.5H219.9v15h-5.625a.938.938,0,0,0,0,1.875H219.9a1.875,1.875,0,0,0,1.875-1.875V161.877A1.875,1.875,0,0,0,219.9,160Z" transform="translate(-194.591 -145.94)" fill="#0071d8"/>
                            </svg>
-                           <h5 class="lato mb-3 mt-4">New Methodologies</h5>
-                           <small class="d-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et reprehenderit recusandae.</small>
+                           <h5 class="lato mb-3 mt-4">Design Marketing</h5>
+                           <small class="d-block">We at Aller provide you with comprehensive resources and tools required to become an unmatched design marketer. Kickstart your design marketing career with our course now. </small>
                            <a href="|" class="float-right mt-3">
                                <svg id="Arrow-right-blue" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#0071d8"/>
@@ -72,8 +72,8 @@
                                <path id="Path_17" data-name="Path 17" d="M226.307,250.15,229.454,247a.955.955,0,1,0-1.351-1.351l-3.822,3.822a.956.956,0,0,0,0,1.351l3.822,3.822a.955.955,0,0,0,1.351-1.351Z" transform="translate(-203.935 -223.393)" fill="#00d879"/>
                                <path id="Path_18" data-name="Path 18" d="M336.121,249.592,332.3,245.77a.955.955,0,0,0-1.351,1.351l3.146,3.146-3.146,3.146a.956.956,0,0,0,0,1.351h0a.956.956,0,0,0,1.351,0l3.822-3.822A.955.955,0,0,0,336.121,249.592Z" transform="translate(-301.047 -223.51)" fill="#00d879"/>
                            </svg>                              
-                           <h5 class="lato mb-3 mt-4">World class services</h5>
-                           <small class="d-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et reprehenderit recusandae perferendis quam ab iusto.</small>
+                           <h5 class="lato mb-3 mt-4">Website Design & Development</h5>
+                           <small class="d-block">Aller’s Web Design & Development Course will enable you to master a wide range of technologies allowing you to create high-quality websites with a seamless experience. We try our best to put everything in front of you which you will need to create a website that stands out.</small>
                            <a href="" class="float-right mt-3">
                                <svg id="Arrow-right-green" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#00d879"/>
@@ -133,7 +133,7 @@
                             </svg>
                            <h3 class="lato ml-4">Web Development</h3>
                            <small class="d-block ml-4 mb-3 mt-3">
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorem, sint magni id ducimus repellendus amet assumenda optio vel. Itaque.
+                                Digital presence of a company is known by its website. Our team can convert your idea into reality with the help of creative thought process and their expertise. 
                            </small>
                         </span>
                     </div>
@@ -163,7 +163,7 @@
                       
                        <h3 class="lato ml-4">Digital Marketing</h3>
                        <small class="d-block ml-4 mb-3 mt-3">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorem, sint magni id ducimu.
+                       Reach and engage with your target audience with the help of our experienced team that hits your business objectives efficiently by implementing strategic online campaigns. At Aller, we provide full-fledged Digital Marketing Services based on your unique requirements.
                        </small>
                    </div>
                </div>
@@ -197,7 +197,7 @@
                         </svg>
                        <h3 class="lato ml-4">Software applications</h3>
                        <small class="d-block ml-4 mb-3 mt-3">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorem, sint magni id ducimus repellendus amet assumenda optio vel. Itaque.
+                            Software helps in automating business processes with ease and minimum effort. Our team of developers provides practical, flexible, and responsive applications with unmatched results. 
                        </small>
                    </div>
                    <div class="service mt-5 pr-3 pl-5 pl-sm-3 pr-sm-5 py-5  text-white">
@@ -233,7 +233,7 @@
                         </svg>
                        <h3 class="lato ml-4">Bulk SMS Service</h3>
                        <small class="d-block ml-4 mb-3 mt-3">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolorem, sint magni id ducimus repellendus amet assumenda optio vel. Itaque.
+                            SMS Marketing is a traditional and most effective way to convey your message to the target audience. Our Bulk SMS service comes in various competitive packages to match your requirements. 
                        </small>
                    </div>
                </div>
@@ -320,13 +320,14 @@
        <div class="container pt-3">
            <div class="row flex-wrap-reverse">
                <div class="col-md-7 mt-5 mt-md-0 text-white">
-                   <h1 class="mb-5 font-weight-bold">
-                       The thing about us is we think <span class="orange-highlight">big ,</span> <span class="orange-highlight">huge</span>
-                   </h1>
+                   <h3 class="mb-5 font-weight-bold">
+                    Looking to take your business online or improving your <span class="orange-highlight">online </span> <span class="orange-highlight">presence?</span>
+                   </h3>
                    <ul class="mb-5">
-                       <li class="mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, voluptatibus.</li>
-                       <li class="mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
-                       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores earum maxime ratione eligendi veniam! At?</li>
+                       <li class="mb-2">Scale-up your business with the help of our Web Development & Digital Marketing Services.</li>
+                       <li class="mb-2">Invest in Google Ads to reach more clients.</li>
+                       <li class="mb-2">Increase your Social Media Engagement.</li>
+                       <li>Automate your processes using our Software Development Service. </li>
                    </ul>
                    <a href="#" class="btn js-tilt btn-outline-light ">
                        <span class="d-inline-flex">
