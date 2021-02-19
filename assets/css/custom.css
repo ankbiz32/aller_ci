@@ -620,8 +620,14 @@ a.cta span {
   .clients-container .clients img {
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
-    opacity: 0.6;
+    opacity: 0.8;
     margin-right: 60px;
+    transition: 0.3s;
+  }
+  .clients-container .clients img:hover {
+    -webkit-filter: grayscale(0.1);
+            filter: grayscale(0.1);
+    opacity: 1;
   }
   .clients-container .clients img:first-child {
     margin-left: 60px;

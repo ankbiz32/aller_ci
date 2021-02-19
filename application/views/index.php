@@ -86,7 +86,7 @@
            </div>
        </div>
        <div class="header-video nml-header-vid d-md-block d-none">
-           <a href="#" class="play">
+           <a class="play" data-target="#vidModal" data-toggle="modal">
                 <svg id="Group_54" data-name="Group 54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106">
                     <circle id="Ellipse_12" data-name="Ellipse 12" cx="30" cy="30" r="30" transform="translate(23 23)" fill="#f7921fcc"/>
                     <g id="Ellipse_13" data-name="Ellipse 13" fill="none" stroke="#f7921f" stroke-width="1">
@@ -427,47 +427,39 @@
         <img class="mt-sm-5 mt-0" src="<?=base_url()?>assets/quote.svg" alt="star" height="60" class="mr-2">
         <?php foreach($feedbacks as $f){?>
                 <div id="<?=$f->id?>" class="tabcontent <?=$f->id?>">
-                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                    <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
+                    <?php $not=(5 - $f->rating); while($f->rating>0){?>
+                        <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
+                    <?php $f->rating-- ; }?>
+                    <?php while($not>0){?>
+                        <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
+                    <?php $not-- ; }?>
                     <p class="h5 mt-4"><?=$f->content?></p>
                     <em><p class="h5 mt-5">- <?=$f->name?></p></em>
                     <small>&nbsp;&emsp;(<?=$f->desig?>)</small>
                 </div>
             <?php }?>
-            
-            <!-- <div id="2" class="tabcontent 2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
-                <p class="h5 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error!</p> 
-                <em><p class="h5 mt-5">- John Dunkin</p></em>
-                <small>&nbsp;&emsp;(CEO)</small>
-            </div>
-            
-            <div id="3" class="tabcontent 3">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <p class="h5 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem aliquid ullam facilis consectetur amet vel, quis non quaerat, voluptas id sapiente adipisci sed harum laboriosam eum, excepturi nisi! Vitae placeat saepe porro delectus nihil, nesciunt aliquid repellendus suscipit iste error sunt eius hic minus consequatur? Placeat, dolorem modi? Expedita.</p>
-                <em><p class="h5 mt-5">- Kaniel outis</p></em>
-                <small>&nbsp;&emsp;(MD)</small>
-            </div> -->
-            
             <div class="tab pb-5">
                 
                 <?php $z=0; foreach($feedbacks as $f){?>
                     <button class="tablinks" onclick="openFeedback(event, <?=$f->id?>)" id="<?=$z==0?'defaultOpen':''?>" style="background:url('<?=base_url()?>assets/clients/<?=$f->img_src?>') no-repeat center; background-size:cover"></button>
                 <?php $z++; }?>
-                <!-- <button class="tablinks" onclick="openFeedback(event, '2')" style="background:url('<?=base_url()?>assets/clients/2.jpg') no-repeat center; background-size:cover"></button>
-                <button class="tablinks" onclick="openFeedback(event, '3')" style="background:url('<?=base_url()?>assets/clients/3.jpg') no-repeat center; background-size:cover"></button> -->
             </div>
        </div>
    </section>
+
+   <div id="vidModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">YouTube Video</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="vid" class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" allowfullscreen></iframe>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
  

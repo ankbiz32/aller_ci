@@ -72,33 +72,39 @@ class Home extends MY_Controller {
 	}
 
 	
-	public function enquiry()
-	{
-		// var_dump('<pre>',$_POST);exit;
-		// $this->form_validation->set_rules('email', 'E-mail', 'required|min_length[10]|max_length[10]|regex_match[/^[0-9]{10}$/]');
+	public function enquiry(){
 		$this->form_validation->set_rules('name', 'Name', 'required');
-		$this->form_validation->set_rules('email', 'E-mail', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
 		$this->form_validation->set_rules('message', 'Message', 'required');
+		
 		if($this->form_validation->run() == true){
-			$data=$this->input->post();
-			$data['message']=substr($data['message'],0,300);
-			$data['date']=date('Y-m-d');
+			$guest_email=$this->input->post('email');
+			$to = $this->fetch->getWebProfile()->email;
+			
+			$msg ="You have a new enquiry from- \n\r Name:".$this->input->post('name')." \n\r E-mail:".$this->input->post('email')." \n\r  Message:".$this->input->post('message');
+			$subject = "Aller - New Enquiry";
+			$headers = "From:" . $guest_email;
+			// mail($to, $subject, $msg, $headers);
+			mail($to, $subject, $msg);
+			
+			$data = $this->input->post();
 			$this->load->model('AddModel','save');
-			$status= $this->save->saveInfo($data, 'enquiries');
+			$status= $this->save->saveInfo($data,'enquiries');
+
 			if($status){
-				$this->session->set_flashdata('success','Thank you for contacting us ! We will get back to you soon.' );
-				redirect('Home');
+				$this->session->set_flashdata('success','Thank you for sending us a message. Our team will reach out to you shortly.' );
+				redirect('/');
 			}
 			else{
-				$this->session->set_flashdata('failed','Error !');
-				redirect('Home');
+				$this->session->set_flashdata('failed','Something went wrong. Please try again in some time.' );
+				redirect('/');
 			}
+		
 		}
 		else{
-			$this->session->set_flashdata('failed',strip_tags(trim(validation_errors())));
-			redirect('Home');
-		} 
+			$this->session->set_flashdata('failed',strip_tags(validation_errors()));
+			redirect('/');
+		}
 	}
-	
 
 }

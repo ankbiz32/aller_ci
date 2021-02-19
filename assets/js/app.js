@@ -1,14 +1,27 @@
-// $('.js-tilt').tilt({
-//   glare: true,
-//   maxGlare: .5,
-//   scale:1.04,
-// })
-// $('.service').tilt({
-//   glare: true,
-//   maxGlare: .5,
-//   scale:1.04,
-//   perspective:1000
-// })
+$('.js-tilt').tilt({
+  glare: true,
+  maxGlare: .5,
+  scale:1.04,
+})
+$('.service').tilt({
+  glare: true,
+  maxGlare: .5,
+  scale:1.04,
+  perspective:1000
+})
+
+
+
+var vidurl = $("#vid").attr('src');    
+$("#vidModal").on('hide.bs.modal', function(){
+    $("#vid").attr('src', '');
+});
+
+$("#vidModal").on('show.bs.modal', function(){
+    $("#vid").attr('src', vidurl);
+});
+
+
 
 // Tab script for feedback Section
 if(document.getElementById("defaultOpen")){

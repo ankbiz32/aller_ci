@@ -1,61 +1,57 @@
 
    <section class="contact pt-0" id="contact">
-       <?php if($this->uri->segment(1)=='contact'){ ?>
-            <img src="./assets/patterns/wave2.png" alt="p" class="pattern1">
-            <div class="clients-container main-contact">
-                    <div class="clients py-5 align-items-start">
+        <?php if($this->uri->segment(1)=='contact'){ ?>
+                <img src="./assets/patterns/wave2.png" alt="p" class="pattern1">
+                <div class="clients-container main-contact">
+                        <div class="clients py-5 align-items-start">
 
-                        <img src="./assets/patterns/wave_white.png" alt="p" class="pattern6">
-                        <div class="email">
-                            <div class="mb-2 d-flex align-items-center">
-                                <span class="material-icons">location_on</span> <strong>&nbsp; ADDRESS</strong>
+                            <img src="./assets/patterns/wave_white.png" alt="p" class="pattern6">
+                            <div class="email">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="material-icons">location_on</span> <strong>&nbsp; ADDRESS</strong>
+                                </div>
+                                <p>
+                                    <?=nl2br($web->address_line1)?>
+                                </p>
                             </div>
-                            <p>
-                                <?=nl2br($web->address_line1)?>
-                            </p>
-                        </div>
 
-                        <div class="phone">
-                            <div class="mb-2 d-flex align-items-center">
-                                <span class="material-icons">email</span><strong>&nbsp; E-MAIL</strong>
+                            <div class="phone">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="material-icons">email</span><strong>&nbsp; E-MAIL</strong>
+                                </div>
+                                <p>
+                                <?=$web->email?>
+                                </p>
                             </div>
-                            <p>
-                            <?=$web->email?>
-                            </p>
-                        </div>
 
-                        <div class="address">
-                            <div class="mb-2 d-flex align-items-center">
-                                <span class="material-icons">phone</span>
-                                <strong>&nbsp; CONTACT NO.</strong>
+                            <div class="address">
+                                <div class="mb-2 d-flex align-items-center">
+                                    <span class="material-icons">phone</span>
+                                    <strong>&nbsp; CONTACT NO.</strong>
+                                </div>
+                                <p>
+                                    
+                                <?=$web->phone1?> <br> 
+                                <?=$web->phone2?>
+                                </p>
                             </div>
-                            <p>
-                                
-                            <?=$web->phone1?> <br> 
-                            <?=$web->phone2?>
-                            </p>
-                        </div>
 
-                    </div>
-            </div>
-       <?php } else{ ?>
-            <img src="<?=base_url()?>assets/patterns/wave2.png" alt="p" class="pattern1">
-            <div class="clients-container">
-                    <div class="clients py-5">
-                        <?php foreach($clients as $cl){?>
-                            <img src="<?=base_url()?>assets/clients/<?=$cl->img_src?>" height="50" alt="" class="">
-                        <?php }?>
-                        <!-- <img src="<?=base_url()?>assets/clients/hdfc.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/TT.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/uti.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/reli.png" height="50" alt="">
-                        <img src="<?=base_url()?>assets/clients/uti.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/img.png" height="50" alt="df" class=" "> -->
-                    </div>
-            </div>
+                        </div>
+                </div>
+        <?php } else{ ?>
+                <img src="<?=base_url()?>assets/patterns/wave2.png" alt="p" class="pattern1">
+                <div class="clients-container">
+                        <div class="clients">
+                            <marquee behavior="" direction=""  onmouseover="this.stop();" onmouseout="this.start();" class="py-5">
+                            <?php foreach($clients as $cl){?>
+                                <img src="<?=base_url()?>assets/clients/<?=$cl->img_src?>" height="70" alt="" class="">
+                            <?php }?>
+                            </marquee>
+                        </div>
+                </div>
         <?php } ?>
     
-       <div class="form-container ml-sm-5 ml-0 bg-orange pb-5">
+        <div class="form-container ml-sm-5 ml-0 bg-orange pb-5">
            <div class="container">
                 <div class="row main-row flex-wrap-reverse">
                     <div class="col-md-7">
@@ -73,7 +69,7 @@
                             </div>
                             <div class="row mt-4 mb-5">
                                 <div class="col float-group">
-                                    <textarea name="message" id="message" rows="5" required maxlength='300'></textarea>
+                                    <textarea name="message" id="message" rows="5" required maxlength='300' required></textarea>
                                     <label for="message">Enter your message here *</label>
                                 <small class="d-block text-right mt-1"><small>** Max. 300 characters</small></small>
                                 </div>
