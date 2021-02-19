@@ -6,7 +6,7 @@
                     <h6 class="text-secondary">ALLER TECHNOLOGIES</h6>
                     <h1 class="lato">We create experiences.</h1>
                     <h1 class="lato mb-4">We build digital work that you will love!</h1>
-                    <a href="" class="js-tilt cta px-3 py-sm-3 py-3 mb-5 text-white d-inline-flex align-items-center">
+                    <a href="#portfolio" class="js-tilt cta px-3 py-sm-3 py-3 mb-5 text-white d-inline-flex align-items-center">
                         <span class="d-inline-flex">Explore our portfolio  <i class="material-icons ml-2">arrow_right_alt</i>
                     </a>
                 </div>
@@ -33,8 +33,8 @@
                                <path id="Path_2" data-name="Path 2" d="M43.59,25.034h-9.27V4.639a.927.927,0,0,0-.093-.414L32.373.517a.966.966,0,0,0-1.659,0L28.859,4.225a.927.927,0,0,0-.1.414v.927a.927.927,0,1,0,1.854,0V4.858L31.539,3l.927,1.854V25.034H30.611V18.544a.927.927,0,1,0-1.854,0v6.489H26.9V16.69h.927a.927.927,0,0,0,0-1.854H26.9v-.927a3.185,3.185,0,0,1,2.147-2.828.927.927,0,0,0,.537-1.3L24.952.513A.806.806,0,0,0,24.8.3a.908.908,0,0,0-1.355,0,.806.806,0,0,0-.152.209l-4.635,9.27a.933.933,0,0,0,.532,1.292,3.188,3.188,0,0,1,2.152,2.834v.927h-.927a.927.927,0,1,0,0,1.854h.927v8.343H19.487V18.545a.927.927,0,1,0-1.854,0v6.489H12.071V20.4h2.781a.927.927,0,1,0,0-1.854H12.071V15.764h1.854a.927.927,0,0,0,0-1.854H12.071V11.128h2.781a.927.927,0,0,0,0-1.854H12.071V6.493h1.854a.927.927,0,0,0,0-1.854H12.071V1.858h5.562V5.566a.927.927,0,1,0,1.854,0V1.858A1.854,1.854,0,0,0,17.633,0H12.071a1.854,1.854,0,0,0-1.854,1.854V25.034H5.582a.927.927,0,1,0,0,1.854H42.663V30.6a2.781,2.781,0,0,1-2.781,2.781H4.655A2.781,2.781,0,0,1,1.874,30.6V4.639A2.781,2.781,0,0,1,4.655,1.858H7.436A.927.927,0,0,0,7.436,0H4.655A4.641,4.641,0,0,0,.02,4.639V30.6a4.641,4.641,0,0,0,4.635,4.635h10.2V39.37l-2.368,1.576a.927.927,0,0,0-.413.774v.927A1.854,1.854,0,0,0,13.925,44.5H30.611a1.854,1.854,0,0,0,1.854-1.854V41.72a.927.927,0,0,0-.413-.771L29.684,39.37V38.012a.927.927,0,0,0-1.854,0v1.854a.927.927,0,0,0,.413.771l2.368,1.579v.431H13.925v-.431l2.368-1.576a.927.927,0,0,0,.413-.774V35.231H39.881A4.641,4.641,0,0,0,44.516,30.6V25.961A.927.927,0,0,0,43.59,25.034Zm-18.54,0H23.2V16.69h1.854Zm0-11.124v.927H23.2v-.927a4.728,4.728,0,0,0-2.46-4.131L23.2,4.858V9.274a.927.927,0,0,0,1.854,0V4.858l2.46,4.921A4.721,4.721,0,0,0,25.049,13.909Z" transform="translate(-0.02 -0.001)" fill="#df0d25"/>
                            </svg>
                            <h5 class="lato mb-3 mt-4">Python Training</h5>
-                           <small class="d-block">Whether you are completely new to programming or want to level up, Aller’s Python Training Course is tailored for all levels. This Python training course will provide you hands-on experience for starting or boosting your career as a programmer.</small>
-                           <a href="#" class="float-right mt-3 mb-0">
+                           <small class="d-block">Aller’s Python Training Course will provide you hands-on experience for starting or boosting your career as a programmer.</small>
+                           <a href="<?=base_url('trainings')?>" class="float-right mt-3 mb-0">
                                <svg id="Arrow-right-red" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#df0d25"/>
                                    <path id="Path_20" data-name="Path 20" d="M171.968,128.194a.788.788,0,1,0-1.037,1.186l5.622,4.919-5.623,4.92a.788.788,0,1,0,1.037,1.186l6.3-5.513a.788.788,0,0,0,0-1.186Zm0,0" transform="translate(-158.062 -118.549)" fill="#df0d25"/>
@@ -50,8 +50,8 @@
                                <path id="Path_7" data-name="Path 7" d="M219.9,160h-5.625a.938.938,0,0,0,0,1.875H219.9v3.75h-5.625a.938.938,0,0,0-.938.938v13.125a.938.938,0,1,0,1.875,0V167.5H219.9v15h-5.625a.938.938,0,0,0,0,1.875H219.9a1.875,1.875,0,0,0,1.875-1.875V161.877A1.875,1.875,0,0,0,219.9,160Z" transform="translate(-194.591 -145.94)" fill="#0071d8"/>
                            </svg>
                            <h5 class="lato mb-3 mt-4">Design Marketing</h5>
-                           <small class="d-block">We at Aller provide you with comprehensive resources and tools required to become an unmatched design marketer. Kickstart your design marketing career with our course now. </small>
-                           <a href="|" class="float-right mt-3">
+                           <small class="d-block">Kickstart your design marketing career with our course now. </small>
+                           <a href="<?=base_url('trainings')?>" class="float-right mt-3">
                                <svg id="Arrow-right-blue" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#0071d8"/>
                                    <path id="Path_20" data-name="Path 20" d="M171.968,128.194a.788.788,0,1,0-1.037,1.186l5.622,4.919-5.623,4.92a.788.788,0,1,0,1.037,1.186l6.3-5.513a.788.788,0,0,0,0-1.186Zm0,0" transform="translate(-158.062 -118.549)" fill="#0071d8"/>
@@ -73,8 +73,8 @@
                                <path id="Path_18" data-name="Path 18" d="M336.121,249.592,332.3,245.77a.955.955,0,0,0-1.351,1.351l3.146,3.146-3.146,3.146a.956.956,0,0,0,0,1.351h0a.956.956,0,0,0,1.351,0l3.822-3.822A.955.955,0,0,0,336.121,249.592Z" transform="translate(-301.047 -223.51)" fill="#00d879"/>
                            </svg>                              
                            <h5 class="lato mb-3 mt-4">Website Design & Development</h5>
-                           <small class="d-block">Aller’s Web Design & Development Course will enable you to master a wide range of technologies allowing you to create high-quality websites with a seamless experience. We try our best to put everything in front of you which you will need to create a website that stands out.</small>
-                           <a href="" class="float-right mt-3">
+                           <small class="d-block">Aller’s Web Design & Development Course will enable you to master a wide range of technologies allowing you to create high-quality websites with a seamless experience.</small>
+                           <a href="<?=base_url('trainings')?>" class="float-right mt-3">
                                <svg id="Arrow-right-green" xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
                                    <path id="Path_19" data-name="Path 19" d="M15.75,0A15.75,15.75,0,1,0,31.5,15.75,15.75,15.75,0,0,0,15.75,0Zm0,29.925A14.175,14.175,0,1,1,29.925,15.75,14.175,14.175,0,0,1,15.75,29.925Zm0,0" fill="#00d879"/>
                                    <path id="Path_20" data-name="Path 20" d="M171.968,128.194a.788.788,0,1,0-1.037,1.186l5.622,4.919-5.623,4.92a.788.788,0,1,0,1.037,1.186l6.3-5.513a.788.788,0,0,0,0-1.186Zm0,0" transform="translate(-158.062 -118.549)" fill="#00d879"/>
@@ -168,7 +168,7 @@
                    </div>
                </div>
                <div class="col-md-5 ml-5 mt--10 with-head">
-                   <a href="" class="text-right d-block orange-highlight">Know more >></a>
+                   <a href="<?=base_url('services')?>" class="text-right d-block orange-highlight">Know more >></a>
                    <h2 class="text-right mb-5 lato font-weight-bold">We're always ready for <span class="lato orange-highlight">challenges</span></h2>
                    <div class="service pr-sm-5 pl-sm-3 py-5 pl-5 pr-3 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90" viewBox="0 0 140.105 140.105">
@@ -247,71 +247,33 @@
        <div class="container">
            <div class="row heading-row">
                <div class="col-sm-5">
-                    <a href="" class="orange-highlight mr-0 mr-sm-5 d-block text-right">See all >></a>
+                    <a href="<?=base_url('trainings')?>" class="orange-highlight mr-0 mr-sm-5 d-block text-right">See all >></a>
                     <h1 class="lato font-weight-bold">We provide world class <span class="orange-highlight">Training</span> </h1>
                </div>
            </div>
            <div class="row training-cards">
-               <div class="col-sm-4">
-                    <div class="tr-card border">
-                        <div class="img-con" style="background: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url('assets/training/python.jpg') no-repeat center; background-size: cover;"></div>
-                        <div class="content-con px-4 py-3">
-                            <h5 class="h5 font-weight-bold">Python training</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia eos assumenda non, eveniet consectetur eum voluptatibus recusandae ea totam!</p>
-                            <div class="row tr-info">
-                                <div class="col-sm-7">
-                                    <small>Duration: 3 months</small>
-                                </div>
-                                <div class="col-sm-5 text-sm-right mt-sm-0 mt-1">
-                                    <small>Price: ₹5500/-</small>
-                                </div>
-                            </div>
-                            <a href="" class="js-tilt cta px-3 py-sm-2 py-2 text-white d-flex justify-content-center align-items-center">
-                                <span class="d-inline-flex">Enquire now<i class="material-icons ml-2">arrow_right_alt</i>
-                            </a>
-                        </div>
-                    </div>
-               </div>
-               <div class="col-sm-4">
-                    <div class="tr-card border">
-                        <div class="img-con" style="background: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url('assets/training/web-development.png') no-repeat center; background-size: cover;"></div>
-                        <div class="content-con px-4 py-3">
-                            <h5 class="h5 font-weight-bold">Web design & development</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia eos assumenda non, eveniet consectetur eum voluptatibus recusandae ea totam!</p>
-                            <div class="row tr-info">
-                                <div class="col-sm-7">
-                                    <small>Duration: 3 months</small>
-                                </div>
-                                <div class="col-sm-5 text-sm-right mt-sm-0 mt-1">
-                                    <small>Price: ₹5500/-</small>
+                <?php foreach($trainings as $t){?>
+                    <div class="col-sm-4">
+                            <div class="tr-card border">
+                                <div class="img-con" style="background: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url('assets/training/<?=$t->img_src?>') no-repeat center; background-size: cover;"></div>
+                                <div class="content-con px-4 py-3">
+                                    <h5 class="h5 font-weight-bold"><?=$t->name?></h5>
+                                    <p><?=(strlen($t->descr) > 200) ? substr($t->descr,0,200).'... <br><a class="text-secondary" href="'.base_url('trainings').'">Read More ></a>' :$t->descr?></p>
+                                    <div class="row tr-info">
+                                        <div class="col-sm-7">
+                                            <small>Duration: <?=$t->duration?></small>
+                                        </div>
+                                        <div class="col-sm-5 text-sm-right mt-sm-0 mt-1">
+                                            <small>Price: ₹<?=$t->price?>/-</small>
+                                        </div>
+                                    </div>
+                                    <a href="<?=base_url('contact#contact')?>" class="js-tilt cta px-3 py-sm-2 py-2 text-white d-flex justify-content-center align-items-center">
+                                        <span class="d-inline-flex">Enquire now<i class="material-icons ml-2">arrow_right_alt</i>
+                                    </a>
                                 </div>
                             </div>
-                            <a href="" class="js-tilt cta px-3 py-sm-2 py-2 text-white d-flex justify-content-center align-items-center">
-                                <span class="d-inline-flex">Enquire now<i class="material-icons ml-2">arrow_right_alt</i>
-                            </a>
-                        </div>
                     </div>
-               </div>
-               <div class="col-sm-4">
-                    <div class="tr-card border">
-                        <div class="img-con" style="background: linear-gradient(rgba(0,0,0,0.3) , rgba(0,0,0,0.3)) , url('assets/training/digital-marketing-course.jpg') no-repeat center; background-size: cover;"></div>
-                        <div class="content-con px-4 py-3">
-                            <h5 class="h5 font-weight-bold">Design marketing</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia eos assumenda non, eveniet consectetur eum voluptatibus recusandae ea totam!</p>
-                            <div class="row tr-info">
-                                <div class="col-sm-7">
-                                    <small>Duration: 3 months</small>
-                                </div>
-                                <div class="col-sm-5 text-sm-right mt-sm-0 mt-1">
-                                    <small>Price: ₹5500/-</small>
-                                </div>
-                            </div>
-                            <a href="" class="js-tilt cta px-3 py-sm-2 py-2 text-white d-flex justify-content-center align-items-center">
-                                <span class="d-inline-flex">Enquire now<i class="material-icons ml-2">arrow_right_alt</i>
-                            </a>
-                        </div>
-                    </div>
-               </div>
+                <?php }?>
            </div>
        </div>
    </section>
@@ -329,7 +291,7 @@
                        <li class="mb-2">Increase your Social Media Engagement.</li>
                        <li>Automate your processes using our Software Development Service. </li>
                    </ul>
-                   <a href="#" class="btn js-tilt btn-outline-light ">
+                   <a href="<?=base_url('about-us')?>" class="btn js-tilt btn-outline-light ">
                        <span class="d-inline-flex">
                            Know more <i class="material-icons ml-2">arrow_right_alt</i>
                     </span></a>
@@ -341,7 +303,7 @@
        </div>
    </section>
 
-   <section class="work">
+   <section class="work" id="portfolio">
     <img src="<?=base_url()?>assets/patterns/r.png" alt="p" class="pattern1">
     <img src="<?=base_url()?>assets/patterns/r4.png" alt="p" class="pattern2">
     <img src="<?=base_url()?>assets/patterns/cp.png" alt="p" class="pattern3">
@@ -463,18 +425,20 @@
     <img src="<?=base_url()?>assets/patterns/t1.png" alt="p" class="pattern1">
        <div class="container">
         <img class="mt-sm-5 mt-0" src="<?=base_url()?>assets/quote.svg" alt="star" height="60" class="mr-2">
-            <div id="1" class="tabcontent 1">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
-                <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
-                <p class="h5 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ex deleniti neque, velit eaque nesciunt. Debitis illum consequatur alias? Quos.</p>
-                <em><p class="h5 mt-5">- Joanna Dunk</p></em>
-                <small>&nbsp;&emsp;(HEAD OF PRODUCT)</small>
-            </div>
+        <?php foreach($feedbacks as $f){?>
+                <div id="<?=$f->id?>" class="tabcontent <?=$f->id?>">
+                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
+                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
+                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
+                    <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
+                    <img src="<?=base_url()?>assets/star-disabled.svg" alt="star" height="20" class="mr-2">
+                    <p class="h5 mt-4"><?=$f->content?></p>
+                    <em><p class="h5 mt-5">- <?=$f->name?></p></em>
+                    <small>&nbsp;&emsp;(<?=$f->desig?>)</small>
+                </div>
+            <?php }?>
             
-            <div id="2" class="tabcontent 2">
+            <!-- <div id="2" class="tabcontent 2">
                 <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
                 <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
                 <img src="<?=base_url()?>assets/star.svg" alt="star" height="20" class="mr-2">
@@ -494,12 +458,15 @@
                 <p class="h5 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem aliquid ullam facilis consectetur amet vel, quis non quaerat, voluptas id sapiente adipisci sed harum laboriosam eum, excepturi nisi! Vitae placeat saepe porro delectus nihil, nesciunt aliquid repellendus suscipit iste error sunt eius hic minus consequatur? Placeat, dolorem modi? Expedita.</p>
                 <em><p class="h5 mt-5">- Kaniel outis</p></em>
                 <small>&nbsp;&emsp;(MD)</small>
-            </div>
+            </div> -->
             
             <div class="tab pb-5">
-                <button class="tablinks" onclick="openFeedback(event, '1')" id="defaultOpen" style="background:url('<?=base_url()?>assets/clients/1.jpg') no-repeat center; background-size:cover"></button>
-                <button class="tablinks" onclick="openFeedback(event, '2')" style="background:url('<?=base_url()?>assets/clients/2.jpg') no-repeat center; background-size:cover"></button>
-                <button class="tablinks" onclick="openFeedback(event, '3')" style="background:url('<?=base_url()?>assets/clients/3.jpg') no-repeat center; background-size:cover"></button>
+                
+                <?php $z=0; foreach($feedbacks as $f){?>
+                    <button class="tablinks" onclick="openFeedback(event, <?=$f->id?>)" id="<?=$z==0?'defaultOpen':''?>" style="background:url('<?=base_url()?>assets/clients/<?=$f->img_src?>') no-repeat center; background-size:cover"></button>
+                <?php $z++; }?>
+                <!-- <button class="tablinks" onclick="openFeedback(event, '2')" style="background:url('<?=base_url()?>assets/clients/2.jpg') no-repeat center; background-size:cover"></button>
+                <button class="tablinks" onclick="openFeedback(event, '3')" style="background:url('<?=base_url()?>assets/clients/3.jpg') no-repeat center; background-size:cover"></button> -->
             </div>
        </div>
    </section>

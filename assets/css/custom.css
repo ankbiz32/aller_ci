@@ -2,6 +2,10 @@
   font-family: 'Sintony','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .btn-outline-light:hover {
   color: #f8f9fa;
   background-color: transparent;
@@ -305,7 +309,7 @@ a.cta span {
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   }
   section.training .training-cards .col-sm-4 .tr-card .img-con {
-    height: 150px;
+    height: 180px;
   }
   section.training .training-cards .col-sm-4 .tr-card .content-con {
     background-color: white;

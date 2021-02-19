@@ -1,5 +1,5 @@
 
-   <section class="contact pt-0">
+   <section class="contact pt-0" id="contact">
        <?php if($this->uri->segment(1)=='contact'){ ?>
             <img src="./assets/patterns/wave2.png" alt="p" class="pattern1">
             <div class="clients-container main-contact">
@@ -42,13 +42,15 @@
             <img src="<?=base_url()?>assets/patterns/wave2.png" alt="p" class="pattern1">
             <div class="clients-container">
                     <div class="clients py-5">
-                        <img src="<?=base_url()?>assets/clients/EE.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/hdfc.png" height="50" alt="" class="">
+                        <?php foreach($clients as $cl){?>
+                            <img src="<?=base_url()?>assets/clients/<?=$cl->img_src?>" height="50" alt="" class="">
+                        <?php }?>
+                        <!-- <img src="<?=base_url()?>assets/clients/hdfc.png" height="50" alt="" class="">
                         <img src="<?=base_url()?>assets/clients/TT.png" height="50" alt="" class="">
                         <img src="<?=base_url()?>assets/clients/uti.png" height="50" alt="" class="">
                         <img src="<?=base_url()?>assets/clients/reli.png" height="50" alt="">
                         <img src="<?=base_url()?>assets/clients/uti.png" height="50" alt="" class="">
-                        <img src="<?=base_url()?>assets/clients/img.png" height="50" alt="df" class=" ">
+                        <img src="<?=base_url()?>assets/clients/img.png" height="50" alt="df" class=" "> -->
                     </div>
             </div>
         <?php } ?>
@@ -100,7 +102,7 @@
             <div class="col-sm-9 text-sm-right text-center mt-sm-0 mt-4">
                 <div class="links mt-2">
                     <a href="<?=base_url()?>" class="mr-4 mb-3 d-inline-block text-white">Home</a>
-                    <!-- <a href="<?=base_url('about-us')?><?=base_url()?>" class="mr-4 mb-3 d-inline-block text-white">About</a> -->
+                    <a href="<?=base_url('about-us')?>" class="mr-4 mb-3 d-inline-block text-white">About</a>
                     <a href="<?=base_url('services')?>" class="mr-4 mb-3 d-inline-block text-white">Services</a>
                     <a href="<?=base_url('trainings')?>" class="mr-4 mb-3 d-inline-block text-white">Trainings</a>
                     <!-- <a href="<?=base_url('blog')?>" class="mr-4 mb-3 d-inline-block text-white">Blogs</a> -->
@@ -132,82 +134,13 @@
        </div>
    </footer>
    
-    <div id="regModal" class="modal">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h3>Farmer Registration</h3>
-            <span class="closeModal">&times;</span>
-        </div>
-        <div class="modal-body">
-            <form action="<?=base_url('Home/FarmerReg')?>" method="post" id="regForm">
-                <div class="flexer">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" required>
-                        <label for="name">Name *</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone" x-moz-errormessage="Enter Contact no. here" pattern="[6-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('')" oninput="this.setCustomValidity('')" maxlength="10" title="You can enter only 10 digits starting with 6,7,8, or 9" id="phone" required>
-                        <label for="phone">Contact no. *</label>
-                    </div>
-                </div>
-                <div class="flexer">
-                    <div class="innerDiv">
-                        <div class="form-group">
-                            <input type="text" name="city" required>
-                            <label for="city">Village/City *</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="occupation" id="occupation" required>
-                            <label for="occupation">Occupation *</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="address" id="address" resize="none" maxlength="250" required></textarea>
-                        <label for="address">Address *</label>
-                    </div>
-                </div>
-                <div class="flexer">
-                    <div class="form-group">
-                        <input type="text" name="capacity" id="capacity" required>
-                        <label for="capacity">Capacity of Farming/Produce/Land  *</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="land" id="land" required>
-                        <label for="land">Total Agriculture Land *</label>
-                    </div>
-                </div>
-                <div class="flexer">
-                    <div class="form-group">
-                        <input type="text" name="soil" id="soil" required>
-                        <label for="soil">Soil Type  *</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="source" id="source" required>
-                        <label for="source">Source of Irrigation *</label>
-                    </div>
-                </div>
-                <div class="flexer">
-                    <div class="form-group">
-                        <input type="text" name="products" id="products" required>
-                        <label for="products">Local Agriculture Products *</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="level" id="level" required>
-                        <label for="level">Water Level *</label>
-                    </div>
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </form>
-        </div>
-        </div>
-    </div>
-
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>
     <script src="<?=base_url()?>assets/js/tilt.jquery.min.js"></script>
     <script src="<?=base_url()?>assets/js/float_label.js"></script>
-    <script src="<?=base_url()?>assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="<?=base_url()?>assets/js/app.js"></script>
     
     <script>
         var base_url = '<?=base_url()?>';

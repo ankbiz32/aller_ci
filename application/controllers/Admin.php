@@ -20,7 +20,7 @@ class Admin extends MY_Controller {
 
         public function Trainings()
         {
-                $data=$this->fetch->getInfo('feedbacks');
+                $data=$this->fetch->getInfo('trainings');
                 $this->load->view('admin/adminheader',['title'=>'Trainings', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/trainings'); 
@@ -57,10 +57,10 @@ class Admin extends MY_Controller {
         
         public function Video()
         {
-                $data=$this->fetch->getInfoByOrder('schemes');
+                $data=$this->fetch->getInfo('video');
                 $this->load->view('admin/adminheader',['title'=>'Video', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
-                $this->load->view('admin/video'); 
+                $this->load->view('admin/video-form'); 
                 $this->load->view('admin/adminfooter');  
         }
         

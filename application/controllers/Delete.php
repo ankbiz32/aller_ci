@@ -123,6 +123,24 @@ class Delete extends MY_Controller {
             }
         }
         
+
+        public function Training($id)
+        {
+            
+            $d= $this->fetch->getInfoById($id, 'trainings');
+            $path= 'assets/training/'.$d->img_src;
+            $status= $this->delete->deleteInfo($id, 'trainings');
+            if($status){
+                unlink("$path");
+                $this->session->set_flashdata('success','Training deleted!');
+                redirect('Admin/Trainings');
+            }
+            else{
+                $this->session->set_flashdata('failed','Error!');
+                redirect('Admin/Trainings');
+            }
+        }
+
         // Delete Event
         public function Event($id)
         {

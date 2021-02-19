@@ -51,47 +51,57 @@ class Add extends MY_Controller {
             } 
         }
 
-        public function Service()
+        public function Training()
         {
-            $this->form_validation->set_rules('name', 'Name', 'required');
-            $this->form_validation->set_rules('link_src', 'Link text', 'required');
-            $this->form_validation->set_rules('link_text', 'Link', 'required');
+            $this->load->view('admin/adminheader',['title'=>'Add training']); 
+            $this->load->view('admin/adminaside'); 
+            $this->load->view('admin/trainings-form'); 
+            $this->load->view('admin/adminfooter');  
+        }
+        public function saveTraining()
+        {
+            // var_dump($_POST);exit;
+            $this->form_validation->set_rules('name', 'Training name', 'required');
+            $this->form_validation->set_rules('descr', 'Description', 'required');
             if($this->form_validation->run() == true){
-                $path ='assets/images';
-                $initialize = array(
-                    "upload_path" => $path,
-                    "allowed_types" => "*",
-                    "remove_spaces" => TRUE,
-                    "max_size" => 350
-                );
-                $this->load->library('upload', $initialize);
-                if (!$this->upload->do_upload('img')) {
-                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors()) );
-                    redirect('Admin/Services');
-                }
-                else {
-                    $imgdata = $this->upload->data();
-                    $imagename = $imgdata['file_name'];
-                    $data=array('name'=>$this->input->post('name'),
-                            'link_src'=>$this->input->post('link_src'),
-                            'link_text'=>$this->input->post('link_text'),
-                            'img_src'=>$imagename
-                            );
-                    $status= $this->save->saveInfo($data, 'services');
+                if( $_FILES['img']['name']!=null ){
+                    $data=$this->input->post();
+                    $path ='assets/training';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Trainings');
+                    }
+                    else {
+                        $filedata = $this->upload->data();
+                        $data['img_src']= $filedata['file_name'];
 
-                    if($status){
-                        $this->session->set_flashdata('success','New Service added !' );
-                        redirect('Admin/Services');
-                    }
-                    else{
-                        $this->session->set_flashdata('failed','Error !');
-                        redirect('Admin/Services');
-                    }
-                } 
+                        $status= $this->save->saveInfo($data,'trainings');
+    
+                        if($status){
+                            $this->session->set_flashdata('success','Training added !' );
+                            redirect('Admin/Trainings');
+                        }
+                        else{
+                            $this->session->set_flashdata('failed','Error !');
+                            redirect('Admin/Trainings');
+                        }
+                    } 
+                    $status= $this->save->saveInfo($data, 'trainings');
+                }
+                else{
+                    $this->session->set_flashdata('failed','Please upload an image');
+                    redirect('Admin/Trainings');
+                }
             }
             else{
                 $this->session->set_flashdata('failed',trim(strip_tags(validation_errors())));
-                redirect('Admin/Services');
+                redirect('Admin/Trainings');
             } 
         }
 
@@ -164,6 +174,43 @@ class Add extends MY_Controller {
         }
 
     
+        public function saveImage()
+        {
+            if( $_FILES['img']['name']!=null ){
+                $path ='assets/images';
+                $initialize = array(
+                    "upload_path" => $path,
+                    "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                    "remove_spaces" => TRUE
+                );
+                $this->load->library('upload', $initialize);
+                if (!$this->upload->do_upload('img')) {
+                    $this->session->set_flashdata('failed',$this->upload->display_errors());
+                    redirect('Admin/gallery');
+                }
+                else {
+                    $filedata = $this->upload->data();
+                    // var_dump($filedata);exit;
+                    $fileName = $filedata['file_name'];
+                    
+                    $data['img_src']=$fileName;
+                    $status= $this->save->saveInfo('gallery',$data);
+
+                    if($status){
+                        $this->session->set_flashdata('success','Image added !' );
+                        redirect('Admin/gallery');
+                    }
+                    else{
+                        $this->session->set_flashdata('failed','Error !');
+                        redirect('Admin/gallery');
+                    }
+                } 
+            }
+            else{
+                $this->session->set_flashdata('failed','Please upload an image');
+                redirect('Admin/gallery');
+            }
+        }
 
 
         function generate_url_slug($string,$table,$field='slug',$key=NULL,$value=NULL){

@@ -11,6 +11,10 @@ class Home extends MY_Controller {
 	{	
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['trainings']=$this->fetch->getInfoByLim('trainings',3);
+		$response['feedbacks']=$this->fetch->getInfo('feedbacks');
+		$response['clients']=$this->fetch->getInfo('clients');
+		// var_dump('<pre>',$response);exit;
 		$this->load->view('header',$response);
 		$this->load->view('index');
 		$this->load->view('footer');
@@ -20,6 +24,7 @@ class Home extends MY_Controller {
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
 		$this->load->view('header' , $response);
 		$this->load->view('about');
 		$this->load->view('footer');
@@ -29,6 +34,7 @@ class Home extends MY_Controller {
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
 		$this->load->view('header' , $response);
 		$this->load->view('services');
 		$this->load->view('footer');
@@ -38,6 +44,8 @@ class Home extends MY_Controller {
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
+		$response['trainings']=$this->fetch->getInfo('trainings');
 		$this->load->view('header' , $response);
 		$this->load->view('trainings');
 		$this->load->view('footer');
@@ -47,6 +55,7 @@ class Home extends MY_Controller {
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
 		$this->load->view('header' , $response);
 		$this->load->view('contact');
 		$this->load->view('footer');
@@ -56,6 +65,7 @@ class Home extends MY_Controller {
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
 		$this->load->view('header' , $response);
 		$this->load->view('policies');
 		$this->load->view('footer');

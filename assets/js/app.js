@@ -1,14 +1,14 @@
-$('.js-tilt').tilt({
-  glare: true,
-  maxGlare: .5,
-  scale:1.04,
-})
-$('.service').tilt({
-  glare: true,
-  maxGlare: .5,
-  scale:1.04,
-  perspective:1000
-})
+// $('.js-tilt').tilt({
+//   glare: true,
+//   maxGlare: .5,
+//   scale:1.04,
+// })
+// $('.service').tilt({
+//   glare: true,
+//   maxGlare: .5,
+//   scale:1.04,
+//   perspective:1000
+// })
 
 // Tab script for feedback Section
 if(document.getElementById("defaultOpen")){

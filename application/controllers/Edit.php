@@ -287,6 +287,85 @@ class Edit extends MY_Controller {
             }
         }
 
+        public function Training($id)
+        {
+            $data=$this->fetch->getInfoById($id,'trainings');
+            $this->load->view('admin/adminheader',['title'=>'Edit training','data'=>$data]); 
+            $this->load->view('admin/adminaside'); 
+            $this->load->view('admin/trainings-form'); 
+            $this->load->view('admin/adminfooter');  
+        }
+        
+        public function updateTraining($id)
+        {  
+            $this->form_validation->set_rules('name', 'Training name', 'required');
+            $this->form_validation->set_rules('descr', 'Description', 'required');
+            
+            if($this->form_validation->run() == true){
+                $data=$this->input->post();
+
+                if( $_FILES['img']['name']!=null ){
+                    $old_img= $this->fetch->getInfoById($id,'trainings');
+                    $unlink= 'assets/training/'.$old_img->img_src;
+                    $path ='assets/training';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Trainings');
+                    }
+                    else {
+                        $filedata = $this->upload->data();
+                        $fileName = $filedata['file_name'];
+                        
+                        $data['img_src']=$fileName;
+                    } 
+                }
+
+                $status= $this->edit->updateInfo($data, $id, 'trainings');
+
+                if($status){
+                    unlink($unlink);
+                    $this->session->set_flashdata('success','Training updated !' );
+                    redirect('Admin/Trainings');
+                }
+                else{
+                    $this->session->set_flashdata('failed','Error !');
+                    redirect('Admin/Trainings');
+                }
+            }
+            else{
+                $this->session->set_flashdata('failed',strip_tags(validation_errors()));
+                redirect('Admin/Trainings');
+            }
+        }
+
+        
+        public function updateVideo($id)
+        {
+            if( $this->input->post()!=null ){
+                $data = $this->input->post();
+                $status= $this->edit->updateInfo($data, $id, 'video');
+
+                if($status){
+                    $this->session->set_flashdata('success','Video updated !' );
+                    redirect('Admin/video-form');
+                }
+                else{
+                    $this->session->set_flashdata('failed','Error !');
+                    redirect('Admin/video-form');
+                }
+            }
+            else{
+                $this->session->set_flashdata('failed','Please set the link for the video');
+                redirect('Admin/video-form');
+            }
+        }
+
         
         public function Header_images($name){
             if($_FILES['img']['name']!=null){

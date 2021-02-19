@@ -34,7 +34,7 @@
                 <table id="bookdt" class="table table-bordered table-hover" style="width:100%">
                   <thead>
                     <tr>
-                      <th>Feedback</th>
+                      <th>Image</th>
                       <th>Feedback</th>
                       <th>Name & designation</th>
                       <th>Action</th>
