@@ -14,10 +14,12 @@ $('.service').tilt({
 
 var vidurl = $("#vid").attr('src');    
 $("#vidModal").on('hide.bs.modal', function(){
+    vidurl=$("#vid").attr('src');
     $("#vid").attr('src', '');
 });
 
 $("#vidModal").on('show.bs.modal', function(){
+   vidurl= $("#vid").data('src');
     $("#vid").attr('src', vidurl);
 });
 

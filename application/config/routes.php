@@ -62,3 +62,4 @@ $route['services'] = 'Home/services';
 $route['trainings'] = 'Home/trainings';
 $route['privacy-policy'] = 'Home/privacy';
 $route['sitemap.xml'] = 'Sitemap';
+$route['sitemap'] = 'Sitemap';

@@ -14,6 +14,7 @@ class Home extends MY_Controller {
 		$response['trainings']=$this->fetch->getInfoByLim('trainings',3);
 		$response['feedbacks']=$this->fetch->getInfo('feedbacks');
 		$response['clients']=$this->fetch->getInfo('clients');
+		$response['vid']=$this->fetch->getInfo('video');
 		// var_dump('<pre>',$response);exit;
 		$this->load->view('header',$response);
 		$this->load->view('index');

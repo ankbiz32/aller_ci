@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2021 at 07:48 PM
+-- Generation Time: Feb 20, 2021 at 12:12 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -211,7 +211,7 @@ CREATE TABLE `webprofile` (
 --
 
 INSERT INTO `webprofile` (`id`, `email`, `phone1`, `phone2`, `whatsapp_no`, `address_line1`, `address_line2`, `fblink`, `linkedinlink`, `twitterlink`, `youtubelink`) VALUES
-(1, 'info@aller.in', '020-27486770', '9765918881', ' 9765918881', 'Esha House, Shree Datta Marg,\r\nSudarshan Nagar,\r\nNear Golande Ram Temple,\r\nChinchwad, Pune,\r\nMaharashtra 411033', '', 'https://www.facebook.com/allertechnologies/', 'https://www.linkedin.com/in/aller-technologies-a6792418b/', 'https://twitter.com/Aller_Techies', '');
+(1, 'info@aller.in', '020-27486770', '9765918881', ' 9765918881', 'Sudarshan Nagar, Chinchwad\r\nPune, MH (411033)', '', 'https://www.facebook.com/allertechnologies/', 'https://www.linkedin.com/in/aller-technologies-a6792418b/', 'https://twitter.com/Aller_Techies', '');
 
 --
 -- Indexes for dumped tables
@@ -285,7 +285,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `feedbacks`

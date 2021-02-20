@@ -8,9 +8,13 @@ class Error404 extends MY_Controller {
 	}
 	
 	public function index()
-	{
-		$profile=$this->fetch->getWebProfile();
-		$this->load->view('header',['web'=>$profile , 'title'=>'Error ! 404 page not found.']);
+	{	
+		$response=array();
+		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['title']='Error 404. Page not found!';
+		$response['clients']=$this->fetch->getInfo('clients');
+		// var_dump('<pre>',$response);exit;
+		$this->load->view('header',$response);
 		$this->load->view('errors/html/custom_404');
 		$this->load->view('footer');
 	}

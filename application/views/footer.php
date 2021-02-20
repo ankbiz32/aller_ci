@@ -3,11 +3,11 @@
         <?php if($this->uri->segment(1)=='contact'){ ?>
                 <img src="./assets/patterns/wave2.png" alt="p" class="pattern1">
                 <div class="clients-container main-contact">
-                        <div class="clients py-5 align-items-start">
+                        <div class="clients py-5 align-items-start text-sm-center">
 
-                            <img src="./assets/patterns/wave_white.png" alt="p" class="pattern6">
+                            <!-- <img src="./assets/patterns/wave_white.png" alt="p" class="pattern6"> -->
                             <div class="email">
-                                <div class="mb-2 d-flex align-items-center">
+                                <div class="mb-2 d-flex align-items-center justify-content-sm-center">
                                     <span class="material-icons">location_on</span> <strong>&nbsp; ADDRESS</strong>
                                 </div>
                                 <p>
@@ -15,8 +15,8 @@
                                 </p>
                             </div>
 
-                            <div class="phone">
-                                <div class="mb-2 d-flex align-items-center">
+                            <div class="phone my-5 my-sm-0">
+                                <div class="mb-2 d-flex align-items-center justify-content-sm-center">
                                     <span class="material-icons">email</span><strong>&nbsp; E-MAIL</strong>
                                 </div>
                                 <p>
@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="address">
-                                <div class="mb-2 d-flex align-items-center">
+                                <div class="mb-2 d-flex align-items-center justify-content-sm-center">
                                     <span class="material-icons">phone</span>
                                     <strong>&nbsp; CONTACT NO.</strong>
                                 </div>
@@ -42,16 +42,16 @@
                 <img src="<?=base_url()?>assets/patterns/wave2.png" alt="p" class="pattern1">
                 <div class="clients-container">
                         <div class="clients">
-                            <marquee behavior="" direction=""  onmouseover="this.stop();" onmouseout="this.start();" class="py-5">
+                            <marquee behavior="" direction=""  onmouseover="this.stop();" onmouseout="this.start();" class="py-5 ">
                             <?php foreach($clients as $cl){?>
-                                <img src="<?=base_url()?>assets/clients/<?=$cl->img_src?>" height="70" alt="" class="">
+                                <img src="<?=base_url()?>assets/clients/<?=$cl->img_src?>" alt="" class="">
                             <?php }?>
                             </marquee>
                         </div>
                 </div>
         <?php } ?>
     
-        <div class="form-container ml-sm-5 ml-0 bg-orange pb-5">
+        <div class="form-container ml-sm-5 ml-0 bg-contact pb-5">
            <div class="container">
                 <div class="row main-row flex-wrap-reverse">
                     <div class="col-md-7">
@@ -109,27 +109,27 @@
             </div>
         </div>
 
-        <hr class="my-sm-5 my-3 bg-light">
+        <hr class="mt-4 mb-4 bg-light">
 
-        <div class="row flex-sm-nowrap flex-wrap align-items-center text-white mt-sm-0 mt-4">
+        <div class="row mb-1 flex-sm-nowrap flex-wrap align-items-center text-white mt-0">
             <div class="col-sm-8">
                 <p class="mb-0 text-sm-left text-center">&copy; <?=date('Y')?> ALLER TECHNOLOGIES - All rights reserved</p>
             </div>
-            <div class="col-sm-4 text-sm-right text-center mt-sm-0 mt-3">
+            <div class="col-sm-4 text-sm-right text-center mt-sm-0 mt-4">
                     <a href="<?=$web->fblink?>" target="_blank" class="">
-                        <img src="<?=base_url()?>assets/facebook-w.svg" height="30" alt="Fb">
+                        <img src="<?=base_url()?>assets/facebook-w.svg" height="20" alt="Fb">
                     </a>
-                    <a href="<?=$web->twitterlink?>" target="_blank" class="mx-4">
-                        <img src="<?=base_url()?>assets/twitter-w.svg" height="30" alt="twitter">
+                    <a href="<?=$web->twitterlink?>" target="_blank" class="mx-3">
+                        <img src="<?=base_url()?>assets/twitter-w.svg" height="20" alt="twitter">
                     </a>
                     <a href="<?=$web->linkedinlink?>" target="_blank" class="">
-                        <img src="<?=base_url()?>assets/linkedin-w.svg" height="30" alt="LinkedIn">
+                        <img src="<?=base_url()?>assets/linkedin-w.svg" height="20" alt="LinkedIn">
                     </a>
             </div>
         </div>
        </div>
    </footer>
-   
+
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>

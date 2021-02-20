@@ -9,9 +9,7 @@ class Sitemap extends MY_Controller {
 	
 	public function index()
 	{
-        $data=$this->fetch->getInfo('events');
-        $data2=$this->fetch->getInfo('projects');
         header("Content-type: text/xml; charset=iso-8859-1");
-		$this->load->view('sitemap',['data'=>$data , 'data2'=>$data2 , 'title'=>'Sitemap']);
+		$this->load->view('sitemap',['title'=>'Sitemap']);
 	}
 }

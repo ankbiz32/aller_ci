@@ -11,7 +11,7 @@
                     </a>
                 </div>
                 <div class="header-video xl-header-vid col-md-7 px-0 pb-0">
-                     <a href="#" class="play">
+                     <a class="play"  data-target="#vidModal" href="javascript:;" data-toggle="modal">
                          <svg id="Group_54" data-name="Group 54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106">
                              <circle id="Ellipse_12" data-name="Ellipse 12" cx="30" cy="30" r="30" transform="translate(23 23)" fill="#f7921fcc"/>
                              <g id="Ellipse_13" data-name="Ellipse 13" fill="none" stroke="#f7921f" stroke-width="1">
@@ -86,7 +86,7 @@
            </div>
        </div>
        <div class="header-video nml-header-vid d-md-block d-none">
-           <a class="play" data-target="#vidModal" data-toggle="modal">
+           <a class="play" data-target="#vidModal" href="javascript:;" data-toggle="modal">
                 <svg id="Group_54" data-name="Group 54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106">
                     <circle id="Ellipse_12" data-name="Ellipse 12" cx="30" cy="30" r="30" transform="translate(23 23)" fill="#f7921fcc"/>
                     <g id="Ellipse_13" data-name="Ellipse 13" fill="none" stroke="#f7921f" stroke-width="1">
@@ -447,17 +447,12 @@
        </div>
    </section>
 
-   <div id="vidModal" class="modal fade">
-        <div class="modal-dialog">
+   <div id="vidModal" class="modal pr-0">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">YouTube Video</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <iframe id="vid" class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" allowfullscreen></iframe>
-                  </div>
+                <div class="modal-body p-0 ">
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    <iframe id="vid" class="embed-responsive-item" data-src="<?=$vid[0]->src?>" src="" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

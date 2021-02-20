@@ -18,27 +18,7 @@
             <priority>0.80</priority>
         </url>
         <url>
-            <loc><?=base_url()?>projects</loc>
-            <lastmod><?=$mod?></lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc><?=base_url()?>media</loc>
-            <lastmod><?=$mod?></lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc><?=base_url()?>events</loc>
-            <lastmod><?=$mod?></lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc><?=base_url()?>privacy-policy</loc>
-            <lastmod><?=$mod?></lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc><?=base_url()?>products</loc>
+            <loc><?=base_url()?>contact</loc>
             <lastmod><?=$mod?></lastmod>
             <priority>0.80</priority>
         </url>
@@ -47,22 +27,12 @@
             <lastmod><?=$mod?></lastmod>
             <priority>0.80</priority>
         </url>
-
-    <?php foreach($data as $d){?>
         <url>
-            <loc><?=base_url('event/').$d->id.'/'.$d->slug?>/</loc>
+            <loc><?=base_url()?>training</loc>
+            <lastmod><?=$mod?></lastmod>
             <priority>0.80</priority>
-            <changefreq>daily</changefreq>
         </url>
-    <?php }?>
 
-    <?php foreach($data2 as $d2){?>
-        <url>
-            <loc><?=base_url('Project/').$d2->id?>/</loc>
-            <priority>0.80</priority>
-            <changefreq>daily</changefreq>
-        </url>
-    <?php }?>
 
 </urlset>
 
