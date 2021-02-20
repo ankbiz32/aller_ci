@@ -70,14 +70,14 @@
                 <a href="trainings" class="mr-5 text-secondary c-nav-link">Trainings</a>
                 <a href="contact" class="text-secondary c-nav-link">Contact</a>
                 <div class="text-center d-sm-none">
-                    <a href="#" class="">
+                    <a href="<?=$web->fblink?>" target="_blank" class="">
                         <img src="<?=base_url()?>assets/facebook.svg" height="30" alt="Fb">
                     </a>
-                    <a href="#" class="mx-4">
-                        <img src="<?=base_url()?>assets/twitter.svg" height="30" alt="Fb">
+                    <a href="<?=$web->twitterlink?>" target="_blank" class="mx-4">
+                        <img src="<?=base_url()?>assets/twitter.svg" height="30" alt="twitter">
                     </a>
-                    <a href="#" class="">
-                        <img src="<?=base_url()?>assets/linkedin.svg" height="30" alt="Fb">
+                    <a href="<?=$web->linkedinlink?>" target="_blank" class="">
+                        <img src="<?=base_url()?>assets/linkedin.svg" height="30" alt="Li">
                     </a>
                 </div>
             </span>
