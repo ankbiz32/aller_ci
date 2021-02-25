@@ -468,8 +468,24 @@ a.cta span {
     -o-object-position: center;
        object-position: center;
   }
+  .work .owl-carousel .owl-stage-outer {
+    position:relative;
+  }
   .work .owl-carousel .owl-nav {
-    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* display: none; */
+
+  }
+  .work .owl-carousel .owl-nav .owl-prev, .work .owl-carousel .owl-nav .owl-next{
+   padding: 8px 12px;
+   font-size: 30px;
+   line-height: 20px;
+    color: black;
   }
   .counts-container {
     margin-bottom: 230px;
@@ -939,6 +955,9 @@ a.cta span {
   .work .right-col .imgB {
     width: 75% !important;
   }
+  .work .owl-carousel .owl-nav {
+    width: 88%;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -1292,6 +1311,10 @@ a.cta span {
   .work img.pattern5 {
     bottom: -70px;
     height: 90px;
+  }
+  .work .owl-carousel .owl-nav {
+    width: 100%;
+    top: 60%;
   }
   .sub-header {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(126, 97, 97, 0.1)), color-stop(30%, white));

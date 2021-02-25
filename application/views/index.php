@@ -306,7 +306,7 @@
    <section class="work" id="portfolio">
     <img src="<?=base_url()?>assets/patterns/r.png" alt="p" class="pattern1">
     <img src="<?=base_url()?>assets/patterns/r4.png" alt="p" class="pattern2">
-    <img src="<?=base_url()?>assets/patterns/cp.png" alt="p" class="pattern3">
+    <!-- <img src="<?=base_url()?>assets/patterns/cp.png" alt="p" class="pattern3"> -->
     <img src="<?=base_url()?>assets/patterns/t2.png" alt="p" class="pattern4">
     <img src="<?=base_url()?>assets/patterns/wave2.png" alt="p" class="pattern5">
        <div class="container">
@@ -323,8 +323,8 @@
                         <h3 class="lato">Website developement for digital company</h3>
                         <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias, repudiandae fugit quam, voluptatum eum obcaecati minima, dolore autem magni voluptatibus delectus veritatis deleniti.</small> <br> <br>
                         <div class="row">
-                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-none d-sm-flex flex-column justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <button class="btn custom-up ">
+                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-none d-sm-flex flex-column order-sm-0 order-1 mt-sm-0 mt-3">
+                                <!-- <button class="btn custom-up ">
                                     <span class="material-icons">
                                         expand_less
                                     </span>
@@ -333,7 +333,7 @@
                                     <span class="material-icons">
                                         expand_more
                                     </span>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
                                     <img src="<?=base_url()?>assets/portfolio/Free-Mobile-App-Screens-Presentation-Mockup-PSD.jpg" alt="image">
@@ -351,7 +351,7 @@
                         <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias, repudiandae fugit quam, voluptatum eum obcaecati minima.</small> <br> <br>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-column justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <button class="btn custom-up ">
+                                <!-- <button class="btn custom-up ">
                                     <span class="material-icons">
                                         expand_less
                                     </span>
@@ -360,7 +360,7 @@
                                     <span class="material-icons">
                                         expand_more
                                     </span>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
                                     <img src="<?=base_url()?>assets/portfolio/pexels-cottonbro-5076531.jpg" alt="image">
@@ -378,7 +378,7 @@
                         <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias.</small> <br> <br>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-sm-column flex-row justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <button class="btn custom-up ">
+                                <!-- <button class="btn custom-up ">
                                     <span class="material-icons">
                                         expand_less
                                     </span>
@@ -387,7 +387,7 @@
                                     <span class="material-icons">
                                         expand_more
                                     </span>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
                                     <img src="<?=base_url()?>assets/portfolio/Free-Mobile-App-Screens-Presentation-Mockup-PSD.jpg" alt="image">

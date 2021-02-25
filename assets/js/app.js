@@ -50,9 +50,10 @@ var owl = $(".owl-carousel").owlCarousel({
   autoplay: false,
   items: 1,
   nav:true,
+  navText: ["‹","›"],
   autoplayHoverPause: true,
-  animateIn: 'fadeInUp',
-  animateOut: 'fadeOutDown',
+  // animateIn: 'fadeInLeft',
+  // animateOut: 'fadeOutRight',
   responsive:{
     0:{
       dots:true
