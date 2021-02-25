@@ -381,6 +381,10 @@ a.cta span {
     -webkit-transform: translateZ(20px);
             transform: translateZ(20px);
   }
+  section.huge.about-huge{
+   padding-bottom: 170px;
+  }
+
   .work {
     margin-top: 150px;
     position: relative;
@@ -893,6 +897,15 @@ a.cta span {
     height: 500px;
     border: none;
   }
+
+
+  section.services.misVis::after {
+    display: none !important;
+  }
+  section.services.misVis .with-head::before {
+    display: none !important;
+  }
+
 
 }
 
