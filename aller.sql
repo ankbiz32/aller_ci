@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2021 at 12:12 PM
+-- Generation Time: Mar 15, 2021 at 01:33 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -86,9 +86,10 @@ CREATE TABLE `feedbacks` (
 --
 
 INSERT INTO `feedbacks` (`id`, `img_src`, `content`, `name`, `desig`, `rating`) VALUES
-(10, '8e2129f44804db65316ed3db92cf8552.jpg', 'Something incredible is waiting to be known from which we spring explorations extraordinary claims require extraordinary evidence made in the interiors of collapsing stars consciousness.', 'Incredible person', 'Actor', 5),
-(11, 'download.jpg', 'Citizens of distant epochs galaxies cosmic ocean courage of our questions Euclid extraordinary claims require extraordinary evidence. Bits of moving fluff invent the universe paroxysm of global death ', 'Kenny ', 'Marketer', 5),
-(12, 'Cinem.jpg', 'The carbon in our apple pies extraordinary claims require extraordinary evidence are creatures of the cosmos rogue Rig Veda billions upon billions. Muse about Orion\'s sword great turbulent clouds deci', 'Random guy', 'Random position', 5);
+(10, 'mm_Kadadi.jpeg', 'We needed to outsource some of my company work of digital marketing. Website development and templates for email marketing for my clients. Aller understands your thought process & has a very quick response. Understood my requirements very well. Very particular.', 'Er. M.M. Kadadi', 'Ex Chairman, IEI Kalaburagi Local Centre', 5),
+(11, 'Namoshi.jpeg', 'Aller Technologies did a great job of not only creating an election portal how we wanted it to be but also gave us great insight on what they believed will help boost likes. We have used digital Marketing service for the election campaigns, must say, professional and co-operating staff.', 'Shashil G Namoshi', 'MLC Karnataka', 5),
+(12, 'Rajnish_wali.jpeg', 'Each layout of posters/video were unique and creative. Helped in strategy management for the election campaign. The staff is sound professional. The working process is simple and easy. We recommend Aller Technologies for Digital Services.', 'Dr. Rajnish Wali', 'Chairmain, Wali Shree Hospitals', 5),
+(14, 'swati_mutha.jpeg', 'They build our website exactly suitable for our business. Simple design but attractive too. User friendly. Pocket-friendly and after-sales service are awesome. You can definitely contact her.', 'Swati Mutha', 'Director, Wonder Kidz, Pune', 5);
 
 -- --------------------------------------------------------
 
@@ -139,10 +140,10 @@ CREATE TABLE `trainings` (
 --
 
 INSERT INTO `trainings` (`id`, `img_src`, `name`, `descr`, `duration`, `price`, `content`) VALUES
-(3, 'python1.jpg', 'Python Training', 'Whether you are completely new to programming or want to level up, Aller’s Python Training Course is tailored for all levels. This Python training course will provide you hands-on experience for starting or boosting your career as a programmer. ', '', '', ''),
-(4, 'web-development1.png', 'Website Design & Development', 'Aller’s Web Design & Development Course will enable you to master a wide range of technologies allowing you to create high-quality websites with a seamless experience. We try our best to put everything in front of you which you will need to create a website that stands out.', '', '', ''),
-(5, 'digital-marketing-course1.jpg', 'Design Marketing', 'We at Aller provide you with comprehensive resources and tools required to become an unmatched design marketer. Kickstart your design marketing career with our course now. ', '', '', ''),
-(6, 'selenium1.jpg', 'Selenium', 'Aller’s Selenium Course is developed for manual testers and developers to learn how to automate web testing and integrate it with the organizational processes. Get hands-on experience on various automation frameworks with our course and get noticed by hiring professionals.', '', '', '');
+(3, 'python1.jpg', 'Python Training', 'Whether you are completely new to programming or want to level up, Aller’s Python Training Course is tailored for all levels. This Python training course will provide you hands-on experience for starting or boosting your career as a programmer. ', '3 months', '15000', '- Introduction to python IDE\r\n- Python syntax\r\n- Strings in python\r\n- List, Tuples, Dictionaries in Python\r\n- Functions & Modules in python\r\nand much more.'),
+(4, 'web-development1.png', 'Website Design & Development', 'Aller’s Web Design & Development Course will enable you to master a wide range of technologies allowing you to create high-quality websites with a seamless experience. We try our best to put everything in front of you which you will need to create a website that stands out.', '3 months', '15000', '- Introduction to Web Design & Applications\r\n- HTML, JAVA, CSS\r\n- Web Technology\r\n- Mobile website development\r\nand much more.'),
+(5, 'digital-marketing-course1.jpg', 'Design Marketing', 'We at Aller provide you with comprehensive resources and tools required to become an unmatched design marketer. Kickstart your design marketing career with our course now. ', '3 months', '15000', '- Plan marketing\r\n- Agency Manager\r\n- Introduction & framework of E-mail marketing\r\n- Mobile marketing\r\n- SEM marketing\r\nand much more.'),
+(6, 'selenium1.jpg', 'Selenium', 'Aller’s Selenium Course is developed for manual testers and developers to learn how to automate web testing and integrate it with the organizational processes. Get hands-on experience on various automation frameworks with our course and get noticed by hiring professionals.', '3 months', '15000', '- Introduction to Selenium\r\n- Installation and Setting up the environment\r\n- Python Basics, Locators, WebDriver\r\n- PyUnit Framework, Data-Driven Testing\r\n- Page Object Model (POM)\r\n- Automation Framework');
 
 -- --------------------------------------------------------
 
@@ -184,7 +185,7 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`id`, `src`) VALUES
-(1, 'https://www.youtube.com/embed/WaDjcajOmUo');
+(1, 'https://www.youtube.com/embed/pLog1njQALg');
 
 -- --------------------------------------------------------
 
@@ -285,13 +286,13 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `portfolio`
