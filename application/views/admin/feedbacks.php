@@ -70,8 +70,8 @@
                                       <div class="row">
                                         <div class="form-group col-12">
                                           <label for="content" class="m-0">Feedback:</label>
-                                          <p class="m-0 text-sm text-muted">(Max. 200 Characters)</p>
-                                          <textarea name="content" id="content" minlength="1" maxlength="200" class="form-control mt-2" rows="5" required><?=$d->content?></textarea>
+                                          <p class="m-0 text-sm text-muted">(Max. 400 Characters)</p>
+                                          <textarea name="content" id="content" minlength="1" maxlength="400" class="form-control mt-2" rows="5" required><?=$d->content?></textarea>
                                         </div>
                                         <div class="form-group col-md-6">
                                           <label for="name" class="m-0">Person name:</label>
@@ -145,8 +145,8 @@
               <div class="row">
                 <div class="form-group col-12">
                     <label for="content" class="m-0">Feedback: *</label>
-                    <p class="text-sm text-muted mt-0 mb-2">(Max. 200 Characters)</p>
-                    <textarea name="content" id="content" class="form-control" minlength="1" maxlength="200" rows="5" required></textarea>
+                    <p class="text-sm text-muted mt-0 mb-2">(Max. 400 Characters)</p>
+                    <textarea name="content" id="content" class="form-control" minlength="1" maxlength="400" rows="5" required></textarea>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="name" class="m-0">Person Name: *</label>

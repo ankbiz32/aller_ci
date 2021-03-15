@@ -28,12 +28,12 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form role="form" method="post" action="<?=base_url('Edit/updateVideo')?>" enctype="multipart/form-data">
+                    <form role="form" method="post" action="<?=base_url('Edit/updateVideo/')?><?=isset($data[0]) ? $data[0]->id : ''?>" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="form-group">
                         <label for="img_src">Enter link here:</label>
                         <div class="form-group">
-                            <input type="url" id="img_src" name="img_src" class="form-control" value="<?=isset($data[0]) ? $data[0]->src : ''?>" required>
+                            <input type="url" id="img_src" name="src" class="form-control" value="<?=isset($data[0]) ? $data[0]->src : ''?>" required>
                         </div>
                         </div>
                     </div>

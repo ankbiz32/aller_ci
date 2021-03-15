@@ -5,7 +5,7 @@
             <div class="row align-items-center flex-wrap-reverse">
                 <div class="sub-header-content col-sm-6 pl-sm-5 pr-sm-4">
                         <h3 class="lato">Trainings</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ab sit! Voluptate distinctio aliquid inventore!</p>
+                        <p>Jump start your learning curve with our easy to learn training modules.</p>
                 </div>
                 <div class="sub-header-img col-sm-6 d-sm-none d-block"  style="background: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.2)) , url('assets/banners/services-banner.jpg') no-repeat center; background-size: cover;">
                 </div>
@@ -41,13 +41,16 @@
                         <div class="index border p-3 mt-4">
                             <h6 class="mb-3">What you will learn:</h6>
                             <small>
-                                <ol class="pl-3">
+                                <p class="">
+                                    <?=nl2br($t->content)?>
+                                </p>
+                                <!-- <ol class="pl-3">
                                     <li>Introduction to python</li>
                                     <li>OOPS concepts</li>
                                     <li>Conditions, Loops  & File handling.</li>
                                     <li>Connecting to server.</li>
                                     <li>Live project.</li>
-                                </ol>
+                                </ol> -->
                             </small>
                         </div>
                         <a href="<?=base_url('contact#contact')?>" class="js-tilt cta px-3 py-sm-2 py-2 text-white d-flex justify-content-center align-items-center mt-3">

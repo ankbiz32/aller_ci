@@ -353,16 +353,16 @@ class Edit extends MY_Controller {
 
                 if($status){
                     $this->session->set_flashdata('success','Video updated !' );
-                    redirect('Admin/video-form');
+                    redirect('Admin/Video');
                 }
                 else{
                     $this->session->set_flashdata('failed','Error !');
-                    redirect('Admin/video-form');
+                    redirect('Admin/Video');
                 }
             }
             else{
                 $this->session->set_flashdata('failed','Please set the link for the video');
-                redirect('Admin/video-form');
+                redirect('Admin/Video');
             }
         }
 

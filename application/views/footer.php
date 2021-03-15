@@ -135,6 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>
     <script src="<?=base_url()?>assets/js/tilt.jquery.min.js"></script>
     <script src="<?=base_url()?>assets/js/float_label.js"></script>
+    <script src="<?=base_url()?>assets/js/spotlight.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="<?=base_url()?>assets/js/app.js"></script>
     

@@ -5,7 +5,7 @@
                <div class="col-md-5 content bg-white py-3 px-sm-0 px-3 py-sm-0">
                     <h6 class="text-secondary">ALLER TECHNOLOGIES</h6>
                     <h1 class="lato">We create experiences.</h1>
-                    <h1 class="lato mb-4">We build digital work that you will love!</h1>
+                    <h1 class="lato mb-4">We make your online presence STRONG!</h1>
                     <a href="#portfolio" class="js-tilt cta px-3 py-sm-3 py-3 mb-5 text-white d-inline-flex align-items-center">
                         <span class="d-inline-flex">Explore our portfolio  <i class="material-icons ml-2">arrow_right_alt</i>
                     </a>
@@ -320,8 +320,8 @@
             <div class="owl-carousel owl-theme">
                 <div class="item row">
                     <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Website developement for digital company</h3>
-                        <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias, repudiandae fugit quam, voluptatum eum obcaecati minima, dolore autem magni voluptatibus delectus veritatis deleniti.</small> <br> <br>
+                        <h3 class="lato">Website developement for IT services firm, Nascent Thoughts</h3>
+                        <small class="">Creative website development for a young and dynamic IT services firm with core competency in Software Services, Web Solutions, Systems Integration and IT Enabled Services. <br> <a href="http://www.nascentthoughts.com" target="_blank">Nascent thoughts</a></small> <br> <br> <br>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-none d-sm-flex flex-column order-sm-0 order-1 mt-sm-0 mt-3">
                                 <!-- <button class="btn custom-up ">
@@ -336,19 +336,19 @@
                                 </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/Free-Mobile-App-Screens-Presentation-Mockup-PSD.jpg" alt="image">
+                                    <img src="<?=base_url()?>assets/portfolio/n1.jpg" alt="Nascent thoughts" class="spotlight">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/website-mockup-psd.jpg" alt="image" class="imgT">
-                        <img src="<?=base_url()?>assets/portfolio/Devices-Mockup.png" alt="image" class="mt-sm-5 mt-4 imgB">
+                        <img src="<?=base_url()?>assets/portfolio/n2.jpg" alt="Nascent thoughts" class="imgT spotlight">
+                        <img src="<?=base_url()?>assets/portfolio/n3.jpg" alt="Nascent thoughts" class="mt-sm-5 mt-4 imgB spotlight">
                     </div>
                 </div>
                 <div class="item row ">
                     <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">App development</h3>
-                        <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias, repudiandae fugit quam, voluptatum eum obcaecati minima.</small> <br> <br>
+                        <h3 class="lato">Bulk SMS & election campaigns</h3>
+                        <small class="">Provided bulk SMS services & election campaign throuh social meadia & facebook marketing for Mr. Shashil G Namoshi (MLC, Karnataka). <br> <a target="_blank" href="https://www.facebook.com/allertechnologies/photos/a.1138316922944046/3202348553207529">See post</a></small> <br> <br> <br>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-column justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
                                 <!-- <button class="btn custom-up ">
@@ -363,19 +363,19 @@
                                 </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/pexels-cottonbro-5076531.jpg" alt="image">
+                                    <img src="<?=base_url()?>assets/portfolio/namoshi-election.jpg" alt="Election campaign" class="spotlight">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/website-mockup-psd.jpg" alt="image" class="w-75 imgT">
-                        <img src="<?=base_url()?>assets/portfolio/Devices-Mockup.png" alt="image" class="w-75 mt-sm-5 mt-4 imgB">
+                        <img src="<?=base_url()?>assets/portfolio/election-campaign.jpg" alt="Election campaign" class="w-75 imgT spotlight">
+                        <img src="<?=base_url()?>assets/portfolio/bulk-sms.png" alt="Election campaign" class="w-75 mt-sm-5 mt-4 imgB spotlight">
                     </div>
                 </div>
                 <div class="item row ">
                     <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Bulk SMS Services</h3>
-                        <small class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ullam molestias.</small> <br> <br>
+                        <h3 class="lato">Web application</h3>
+                        <small class="">HKE membership web application with super Admin.</small> <br> <br>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-sm-column flex-row justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
                                 <!-- <button class="btn custom-up ">
@@ -390,13 +390,40 @@
                                 </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/Free-Mobile-App-Screens-Presentation-Mockup-PSD.jpg" alt="image">
+                                    <img src="<?=base_url()?>assets/portfolio/61-min.png" class="spotlight" alt="HKE webapp">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/pexels-c-technical-5971288.jpg" alt="image" class="w-75 imgT">
-                        <img src="<?=base_url()?>assets/portfolio/pexels-cottonbro-5077047.jpg" alt="image" class="w-75 mt-sm-5 mt-4 imgB">
+                        <img src="<?=base_url()?>assets/portfolio/41-min.png" alt="HKE webapp" class="w-75 imgT">
+                        <img src="<?=base_url()?>assets/portfolio/21-min.png" alt="HKE webapp" class="w-75 mt-sm-5 mt-4 imgB spotlight">
+                    </div>
+                </div>
+                <div class="item row ">
+                    <div class="col-md-5 left-col d-flex flex-column justify-content-between">
+                        <h3 class="lato">Web application for hospital management</h3>
+                        <small class="">HMS web application with super Admin.</small> <br> <br>
+                        <div class="row">
+                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-sm-column flex-row justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
+                                <!-- <button class="btn custom-up ">
+                                    <span class="material-icons">
+                                        expand_less
+                                    </span>
+                                </button>
+                                <button class="btn custom-down">
+                                    <span class="material-icons">
+                                        expand_more
+                                    </span>
+                                </button> -->
+                            </div>
+                            <div class="col-sm-10 mb-sm-0 mb-3">
+                                    <img src="<?=base_url()?>assets/portfolio/hms1.png" class="spotlight" alt="HMS webapp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
+                        <img src="<?=base_url()?>assets/portfolio/hms2.png" alt="HMS webapp" class="w-75 imgT spotlight">
+                        <img src="<?=base_url()?>assets/portfolio/hms3.png" alt="HMS webapp" class="w-75 mt-sm-5 mt-4 imgB spotlight">
                     </div>
                 </div>
             </div>
