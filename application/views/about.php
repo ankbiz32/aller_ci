@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <section class="services misVis mt-5 mb-5">
+    <section class="services misVis mt-5 mb-1">
        <img src="<?=base_url()?>assets/patterns/r2.png" alt="p" class="pattern1">
        <img src="<?=base_url()?>assets/patterns/r1.png" alt="p" class="pattern3">
        <div class="container mt-5 mb-5">
@@ -101,6 +101,27 @@
            </div>
        </div>
    </section>
+
+   <section class="about-main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-7 order-sm-0 order-1">
+                    <p>"We are into the business from last 6 years and have successfully executed 150+ projects into various domains, which provides us clear insight of multi-industry domain experience." </p>
+                    <strong>NAMRATA PHATATE</strong> <br>
+                    <em>Founder , Aller Technologies</em>
+                    <p class="mt-5">
+                        <a href="https://www.udyamgyan.com/blog/2021/03/17/conversation-namrata-phatate-founder-aller-technologies" target="_blank" class="btn js-tilt btn-outline-info">
+                        <span class="d-inline-flex">
+                           Read interview <i class="material-icons ml-2">arrow_right_alt</i>
+                        </span></a>
+                    </p>
+                </div>
+                <div class="col-sm-5 pb-sm-0 pb-5 order-sm-1 order-0 text-center">
+                    <img src="<?=base_url('assets/founder.jpg')?>" alt="" style="width:70%; object-fit:contain; border-radius:20px">
+                </div>
+            </div>
+        </div>
+    </section>
 
    <section class="huge mt-5 bg-blue about-huge">
        <div class="container pt-3">
