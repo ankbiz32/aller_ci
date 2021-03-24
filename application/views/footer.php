@@ -130,6 +130,12 @@
        </div>
    </footer>
 
+   <div class="float-whatsapp">
+        <a href="https://wa.me/919765718881?text=Hello%2C%0AI%20need%20to%20enquire%20about%20your%20services.">
+            <img src="<?=base_url()?>assets/whatsapp.svg" alt="">
+        </a>
+   </div>
+
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.js"></script>

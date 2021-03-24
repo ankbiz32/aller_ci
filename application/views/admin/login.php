@@ -57,7 +57,7 @@
       </form>
 
       <p class="mb-1 mt-3">
-        <a href="#">Forgot password ?</a>
+        <!-- <a href="#">Forgot password ?</a> -->
       </p>
       <?php if(isset($errors)) : ?>
         <h6 class="alert alert-danger mt-4"><?= $errors ?></h6>

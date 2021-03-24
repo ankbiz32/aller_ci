@@ -906,6 +906,15 @@ a.cta span {
     display: none !important;
   }
 
+  .float-whatsapp{
+    position: fixed;
+    right: 15px;
+    bottom: 90px;
+    z-index: 100;
+  }
+  .float-whatsapp img{
+    width: 70px;
+  }
 
 }
 

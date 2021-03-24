@@ -43,6 +43,31 @@
     <link href="<?=base_url()?>assets/css/float_label.css" rel="stylesheet" type="text/css"/>
     <link href="<?=base_url()?>assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v10.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="534544483321296"
+  logged_in_greeting="Hi! How can we help you?"
+  logged_out_greeting="Hi! How can we help you?">
+      </div>
 </head>
 <body>
 
