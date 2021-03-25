@@ -52,6 +52,28 @@ class Home extends MY_Controller {
 		$this->load->view('footer');
 	}
 
+	public function projects()
+	{
+		$response=array();
+		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
+		$response['portfolio']=$this->fetch->getInfo('portfolio');
+		$this->load->view('header' , $response);
+		$this->load->view('portfolio_all');
+		$this->load->view('footer');
+	}
+
+	public function project()
+	{
+		$response=array();
+		$response['web']=$this->fetch->getWebProfile('webprofile');
+		$response['clients']=$this->fetch->getInfo('clients');
+		$response['portfolio']=$this->fetch->getInfo('portfolio');
+		$this->load->view('header' , $response);
+		$this->load->view('portfolio');
+		$this->load->view('footer');
+	}
+
 	public function contact()
 	{
 		$response=array();

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2021 at 01:33 PM
+-- Generation Time: Mar 25, 2021 at 01:43 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.8
 
@@ -100,11 +100,20 @@ INSERT INTO `feedbacks` (`id`, `img_src`, `content`, `name`, `desig`, `rating`) 
 CREATE TABLE `portfolio` (
   `id` int(11) NOT NULL,
   `title` varchar(200) NOT NULL,
-  `descr` text NOT NULL,
+  `short_descr` text DEFAULT NULL,
   `img_src1` varchar(200) NOT NULL,
   `img_src2` varchar(200) NOT NULL,
-  `img_src3` varchar(200) NOT NULL
+  `img_src3` varchar(200) NOT NULL,
+  `full_descr` longtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `portfolio`
+--
+
+INSERT INTO `portfolio` (`id`, `title`, `short_descr`, `img_src1`, `img_src2`, `img_src3`, `full_descr`) VALUES
+(1, 'Website developement for IT services firm, Nascent Thoughts', 'Creative website development for a young and dynamic IT services firm with core competency in Software Services, Web Solutions, Systems Integration and IT Enabled Services.', 'n1.jpg', 'n2.jpg', 'n3.jpg', 'dfg gregreg\r\nrg ergr ger ger\r\ng er '),
+(2, 'Bulk SMS & election campaigns', 'Provided bulk SMS services & election campaign throuh social meadia & facebook marketing for Mr. Shashil G Namoshi (MLC, Karnataka).', 'namoshi-election.png', 'election-campaign.png', 'bulk-sms.png', 'dfg gregreg\r\nrg ergr ger ger\r\ng er ');
 
 -- --------------------------------------------------------
 
@@ -298,7 +307,7 @@ ALTER TABLE `feedbacks`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`

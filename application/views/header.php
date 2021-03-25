@@ -91,7 +91,7 @@
             <span class="links-container">
                 <a href="about-us" class="mr-5 text-secondary c-nav-link" >About</a>
                 <a href="services" class="mr-5 text-secondary c-nav-link">Services</a>
-                <!-- <a href="portfolio" class="mr-5 text-secondary c-nav-link">Portfolio</a> -->
+                <a href="portfolio" class="mr-5 text-secondary c-nav-link">Portfolio</a>
                 <a href="trainings" class="mr-5 text-secondary c-nav-link">Trainings</a>
                 <a href="contact" class="text-secondary c-nav-link">Contact</a>
                 <div class="text-center d-sm-none">
