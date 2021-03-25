@@ -363,12 +363,12 @@
                                 </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/namoshi-election.jpg" alt="Election campaign" class="spotlight">
+                                    <img src="<?=base_url()?>assets/portfolio/namoshi-election.png" alt="Election campaign" class="spotlight">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/election-campaign.jpg" alt="Election campaign" class="w-75 imgT spotlight">
+                        <img src="<?=base_url()?>assets/portfolio/election-campaign.png" alt="Election campaign" class="w-75 imgT spotlight">
                         <img src="<?=base_url()?>assets/portfolio/bulk-sms.png" alt="Election campaign" class="w-75 mt-sm-5 mt-4 imgB spotlight">
                     </div>
                 </div>
