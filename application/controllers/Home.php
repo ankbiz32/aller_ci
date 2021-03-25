@@ -57,7 +57,7 @@ class Home extends MY_Controller {
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
 		$response['clients']=$this->fetch->getInfo('clients');
-		$response['portfolio']=$this->fetch->getInfo('portfolio');
+		$response['portfolio']=$this->fetch->getInfoByOrder('portfolio');
 		$this->load->view('header' , $response);
 		$this->load->view('portfolio_all');
 		$this->load->view('footer');

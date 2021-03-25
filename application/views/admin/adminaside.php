@@ -36,12 +36,12 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="<?=base_url('Admin/Portfolio')?>" class="nav-link <?php if($this->uri->segment(2)=="Portfolio"){echo ' CustomActive';}?>">
               <i class="far fa-cubes nav-icon"></i>
               <p>Portfolio</p>
             </a>
-          </li> -->
+          </li>
 
           <li class="nav-item">
             <a href="<?=base_url('Admin/Feedbacks')?>" class="nav-link <?php if($this->uri->segment(2)=="Feedbacks"){echo ' CustomActive';}?>">

@@ -85,96 +85,6 @@ class Edit extends MY_Controller {
             }
         }
 
-        public function Product($id)
-        {
-            $data=$this->input->post();
-
-            if($_FILES['img']['name']!=null){
-                $path ='assets/images';
-                $initialize = array(
-                    "upload_path" => $path,
-                    "allowed_types" => "*",
-                    "remove_spaces" => TRUE,
-                    "max_size" => 350
-                );
-                $this->load->library('upload', $initialize);
-                if (!$this->upload->do_upload('img')) {
-                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors() ) );
-                    redirect('Admin/Products');
-                } 
-                else {
-                    $imgdata = $this->upload->data();
-                    $data['img_src'] = $imgdata['file_name'];
-                    $d= $this->fetch->getInfoById($id,'products');
-                    $path= 'assets/images/'.$d->img_src;
-                }
-            }
-
-            $status= $this->edit->updateInfo($data, $id, 'products');
-            if($status){
-                unlink($path);
-                $this->session->set_flashdata('success','Product Updated !');
-                redirect('Admin/Products');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error !');
-                redirect('Admin/Products');
-            }
-        }
-
-        public function Scheme($id)
-        {
-            $data=$this->input->post();
-
-            if($_FILES['img']['name']!=null){
-                $path ='assets/images';
-                $initialize = array(
-                    "upload_path" => $path,
-                    "allowed_types" => "*",
-                    "remove_spaces" => TRUE,
-                    "max_size" => 350
-                );
-                $this->load->library('upload', $initialize);
-                if (!$this->upload->do_upload('img')) {
-                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors() ) );
-                    redirect('Admin/Schemes');
-                } 
-                else {
-                    $imgdata = $this->upload->data();
-                    $data['img_src'] = $imgdata['file_name'];
-                    $d= $this->fetch->getInfoById($id,'schemes');
-                    $path= 'assets/images/'.$d->img_src;
-                }
-            }
-
-            $status= $this->edit->updateInfo($data, $id, 'schemes');
-            if($status){
-                unlink($path);
-                $this->session->set_flashdata('success','Scheme Updated !');
-                redirect('Admin/Schemes');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error !');
-                redirect('Admin/Schemes');
-            }
-        }
-
-        public function Role($id)
-        {
-            $data=$this->input->post();
-            $status= $this->edit->updateRole($data, $id, 'reg_roles');
-            if($status==true){
-                $this->session->set_flashdata('success','Role Updated !');
-                redirect('Admin/Roles');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error !');
-                redirect('Admin/Roles');
-            }
-        }
-
-    
-
         public function Feedback($id)
         {
             $data=$this->input->post();
@@ -213,80 +123,6 @@ class Edit extends MY_Controller {
             }
         }
 
-        public function Event($id)
-        {
-            $data=$this->input->post();
-            $data['slug']=$this->generate_url_slug($data['heading'],'events');
-            if($_FILES['img']['name']!=null){
-                $path ='assets/images';
-                $initialize = array(
-                    "upload_path" => $path,
-                    "allowed_types" => "jpg|jpeg|png|bmp|webp|gif",
-                    "remove_spaces" => TRUE,
-                    "max_size" => 350
-                );
-                $this->load->library('upload', $initialize);
-                if (!$this->upload->do_upload('img')) {
-                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors() ) );
-                    redirect('Admin/Event');
-                } 
-                else {
-                    $imgdata = $this->upload->data();
-                    $data['img_src'] = $imgdata['file_name'];
-                    $d= $this->fetch->getInfoById($id,'events');
-                    $path= 'assets/images/'.$d->img_src;
-                }
-            }
-
-            $status= $this->edit->updateInfo($data, $id, 'events');
-            if($status){
-                unlink($path);
-                $this->session->set_flashdata('success','Event Updated !');
-                redirect('Admin/Events');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error !');
-                redirect('Admin/Events');
-            }
-        }
-
-        public function Project($id)
-        {
-            $data=$this->input->post();
-
-            if($_FILES['img']['name']!=null){
-                $path ='assets/images';
-                $initialize = array(
-                    "upload_path" => $path,
-                    "allowed_types" => "jpg|jpeg|png|bmp|webp|gif",
-                    "remove_spaces" => TRUE,
-                    "max_size" => 350
-                );
-                $this->load->library('upload', $initialize);
-                if (!$this->upload->do_upload('img')) {
-                    $this->session->set_flashdata('failed',strip_tags($this->upload->display_errors() ) );
-                    redirect('Admin/Projects');
-                } 
-                else {
-                    $imgdata = $this->upload->data();
-                    $data['img_src'] = $imgdata['file_name'];
-                    $d= $this->fetch->getInfoById($id,'events');
-                    $path= 'assets/images/'.$d->img_src;
-                }
-            }
-
-            $status= $this->edit->updateInfo($data, $id, 'projects');
-            if($status){
-                unlink($path);
-                $this->session->set_flashdata('success','Project Updated !');
-                redirect('Admin/Projects');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error !');
-                redirect('Admin/Projects');
-            }
-        }
-
         public function Training($id)
         {
             $data=$this->fetch->getInfoById($id,'trainings');
@@ -295,7 +131,6 @@ class Edit extends MY_Controller {
             $this->load->view('admin/trainings-form'); 
             $this->load->view('admin/adminfooter');  
         }
-        
         public function updateTraining($id)
         {  
             $this->form_validation->set_rules('name', 'Training name', 'required');
@@ -341,6 +176,106 @@ class Edit extends MY_Controller {
             else{
                 $this->session->set_flashdata('failed',strip_tags(validation_errors()));
                 redirect('Admin/Trainings');
+            }
+        }
+
+        public function Portfolio($id)
+        {
+            $data=$this->fetch->getInfoById($id,'portfolio');
+            $this->load->view('admin/adminheader',['title'=>'Edit portfolio','data'=>$data]); 
+            $this->load->view('admin/adminaside'); 
+            $this->load->view('admin/portfolio-form'); 
+            $this->load->view('admin/adminfooter');  
+        }
+        public function updatePortfolio($id)
+        {  
+            $this->form_validation->set_rules('title', 'Project title', 'required');
+            $this->form_validation->set_rules('short_descr', 'Short description', 'required');
+            
+            if($this->form_validation->run() == true){
+                $data=$this->input->post();
+
+                if( $_FILES['img1']['name']!=null ){
+                    $old_img= $this->fetch->getInfoById($id,'portfolio');
+                    $unlink1= 'assets/portfolio/'.$old_img->img_src1;
+                    $path ='assets/portfolio';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img1')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else {
+                        $filedata1 = $this->upload->data();
+                        $fileName1 = $filedata1['file_name'];
+                        
+                        $data['img_src1']=$fileName1;
+                    } 
+                }
+                if( $_FILES['img2']['name']!=null ){
+                    $old_img= $this->fetch->getInfoById($id,'portfolio');
+                    $unlink2= 'assets/portfolio/'.$old_img->img_src2;
+                    $path ='assets/portfolio';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img2')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else {
+                        $filedata2 = $this->upload->data();
+                        $fileName2 = $filedata2['file_name'];
+                        
+                        $data['img_src2']=$fileName2;
+                    } 
+                }
+                if( $_FILES['img3']['name']!=null ){
+                    $old_img= $this->fetch->getInfoById($id,'portfolio');
+                    $unlink3= 'assets/portfolio/'.$old_img->img_src3;
+                    $path ='assets/portfolio';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img3')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else {
+                        $filedata3 = $this->upload->data();
+                        $fileName3 = $filedata3['file_name'];
+                        
+                        $data['img_src3']=$fileName3;
+                    } 
+                }
+
+                $status= $this->edit->updateInfo($data, $id, 'portfolio');
+
+                if($status){
+                    unlink($unlink1);
+                    unlink($unlink2);
+                    unlink($unlink3);
+                    $this->session->set_flashdata('success','Portfolio project updated !' );
+                    redirect('Admin/Portfolio');
+                }
+                else{
+                    $this->session->set_flashdata('failed','Error !');
+                    redirect('Admin/Portfolio');
+                }
+            }
+            else{
+                $this->session->set_flashdata('failed',strip_tags(validation_errors()));
+                redirect('Admin/Portfolio');
             }
         }
 

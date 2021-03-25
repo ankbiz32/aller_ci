@@ -10,7 +10,7 @@ class Delete extends MY_Controller {
                 $this->load->model('DeleteModel','delete');
         }
 
-        // Delete Slider
+  
         public function Enquiry($id)
         {
             $status= $this->delete->deleteInfo($id, 'enquiries');
@@ -24,21 +24,24 @@ class Delete extends MY_Controller {
             }
         }
 
-        // Delete Slider
-        public function Slide($id)
-        {
-            
-            $d= $this->fetch->getInfoById($id, 'hero_slider');
-            $path= 'assets/images/'.$d->img_src;
-            $status= $this->delete->deleteInfo($id, 'hero_slider');
+
+        public function Portfolio($id)
+        { 
+            $d= $this->fetch->getInfoById($id, 'portfolio');
+            $path1= 'assets/portfolio/'.$d->img_src1;
+            $path2= 'assets/portfolio/'.$d->img_src2;
+            $path3= 'assets/portfolio/'.$d->img_src3;
+            $status= $this->delete->deleteInfo($id, 'portfolio');
             if($status){
-                unlink("$path");
-                $this->session->set_flashdata('success','Slide Deleted!');
-                redirect('Admin/Hero_sliders');
+                unlink("$path1");
+                unlink("$path2");
+                unlink("$path3");
+                $this->session->set_flashdata('success','Project deleted from portfolio!');
+                redirect('Admin/Portfolio');
             }
             else{
                 $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Hero_sliders');
+                redirect('Admin/Portfolio');
             }
         }
 
@@ -59,54 +62,6 @@ class Delete extends MY_Controller {
             }
         }
 
-        public function Product($id)
-        {
-            
-            $d= $this->fetch->getInfoById($id, 'products');
-            $path= 'assets/images/'.$d->img_src;
-            $status= $this->delete->deleteInfo($id, 'products');
-            if($status){
-                unlink("$path");
-                $this->session->set_flashdata('success','Product Deleted!');
-                redirect('Admin/Products');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Products');
-            }
-        }
-
-        public function Scheme($id)
-        {
-            
-            $d= $this->fetch->getInfoById($id, 'schemes');
-            $path= 'assets/images/'.$d->img_src;
-            $status= $this->delete->deleteInfo($id, 'schemes');
-            if($status){
-                unlink("$path");
-                $this->session->set_flashdata('success','Scheme Deleted!');
-                redirect('Admin/Schemes');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Schemes');
-            }
-        }
-
-        public function Role($id)
-        {
-            $status= $this->delete->deleteRole($id, 'reg_roles');
-            if($status){
-                $this->session->set_flashdata('success','Role deleted!');
-                redirect('Admin/Roles');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Roles');
-            }
-        }
-        
-        // Delete Feedbacks
         public function Feedback($id)
         {
             $d= $this->fetch->getInfoById($id, 'feedbacks');
@@ -141,25 +96,7 @@ class Delete extends MY_Controller {
             }
         }
 
-        // Delete Event
-        public function Event($id)
-        {
-            
-            $d= $this->fetch->getInfoById($id, 'events');
-            $path= 'assets/images/'.$d->img_src;
-            $status= $this->delete->deleteInfo($id, 'events');
-            if($status){
-                unlink("$path");
-                $this->session->set_flashdata('success','Event Deleted!');
-                redirect('Admin/Events');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin/Events');
-            }
-        }
 
-        // Delete Clients
         public function Clients($id)
         {
             
@@ -176,34 +113,7 @@ class Delete extends MY_Controller {
                 redirect('Admin/Clients');
             }
         }
-
-        // Delete farmer registration
-        public function Farmer_reg($id)
-        {
-            $status= $this->delete->deleteInfo($id, 'farmer_reg');
-            if($status){
-                $this->session->set_flashdata('success','Registration Deleted!');
-                redirect('Admin');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin');
-            }
-        }
-
-        // Delete partner registration
-        public function Partner_reg($id)
-        {
-            $status= $this->delete->deletePartnerReg($id, 'partner_reg');
-            if($status){
-                $this->session->set_flashdata('success','Registration Deleted!');
-                redirect('Admin');
-            }
-            else{
-                $this->session->set_flashdata('failed','Error!');
-                redirect('Admin');
-            }
-        }
+     
 
 
 

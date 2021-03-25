@@ -68,8 +68,6 @@
 
 <!-- Sweet alert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<!-- Bootstrap 4 -->
-<script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="<?php echo base_url(); ?>assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- jQuery -->
   <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <style>
     html{
       font-size:90%;

@@ -29,7 +29,7 @@ class Admin extends MY_Controller {
 
         public function Portfolio()
         {
-                $data=$this->fetch->getInfoByOrder('products');
+                $data=$this->fetch->getInfoByOrder('portfolio');
                 $this->load->view('admin/adminheader',['title'=>'Portfolio', 'data' => $data]); 
                 $this->load->view('admin/adminaside'); 
                 $this->load->view('admin/portfolio'); 

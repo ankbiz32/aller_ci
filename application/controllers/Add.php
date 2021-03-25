@@ -51,6 +51,76 @@ class Add extends MY_Controller {
             } 
         }
 
+        public function Portfolio()
+        {
+            $this->load->view('admin/adminheader',['title'=>'Add Project']); 
+            $this->load->view('admin/adminaside'); 
+            $this->load->view('admin/portfolio-form'); 
+            $this->load->view('admin/adminfooter');  
+        }
+        public function savePortfolio()
+        {
+            // var_dump($_POST);exit;
+            $this->form_validation->set_rules('title', 'Project title', 'required');
+            $this->form_validation->set_rules('short_descr', 'Short description', 'required');
+            if($this->form_validation->run() == true){
+                if( $_FILES['img1']['name']!=null &&  $_FILES['img2']['name']!=null && $_FILES['img3']['name']!=null ){
+                    $data=$this->input->post();
+                    $path ='assets/portfolio';
+                    $initialize = array(
+                        "upload_path" => $path,
+                        "allowed_types" => "jpg|jpeg|png|bmp|webp",
+                        "remove_spaces" => TRUE
+                    );
+                    $this->load->library('upload', $initialize);
+                    if (!$this->upload->do_upload('img1')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else{
+                        $filedata1 = $this->upload->data();
+                    }
+                    if (!$this->upload->do_upload('img2')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else{
+                        $filedata2 = $this->upload->data();
+                    }
+                    if (!$this->upload->do_upload('img3')) {
+                        $this->session->set_flashdata('failed',$this->upload->display_errors());
+                        redirect('Admin/Portfolio');
+                    }
+                    else {
+                        $filedata3 = $this->upload->data();
+
+                        $data['img_src1']= $filedata1['file_name'];
+                        $data['img_src2']= $filedata2['file_name'];
+                        $data['img_src3']= $filedata3['file_name'];
+
+                        $status= $this->save->saveInfo($data,'portfolio');
+    
+                        if($status){
+                            $this->session->set_flashdata('success','Project added to portfolio!' );
+                            redirect('Admin/Portfolio');
+                        }
+                        else{
+                            $this->session->set_flashdata('failed','Error !');
+                            redirect('Admin/Portfolio');
+                        }
+                    } 
+                }
+                else{
+                    $this->session->set_flashdata('failed','Please upload all required images');
+                    redirect('Admin/Portfolio');
+                }
+            }
+            else{
+                $this->session->set_flashdata('failed',trim(strip_tags(validation_errors())));
+                redirect('Admin/Portfolio');
+            } 
+        }
+
         public function Training()
         {
             $this->load->view('admin/adminheader',['title'=>'Add training']); 
