@@ -32,6 +32,11 @@
             <lastmod><?=$mod?></lastmod>
             <priority>0.80</priority>
         </url>
+        <url>
+            <loc><?=base_url()?>portfolio</loc>
+            <lastmod><?=$mod?></lastmod>
+            <priority>0.80</priority>
+        </url>
 
 
 </urlset>

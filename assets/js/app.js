@@ -24,6 +24,10 @@ $("#vidModal").on('show.bs.modal', function(){
 });
 
 
+$('.imgLeft').click(function() {
+  $(this).parent().parent().parent().parent().find('.imgT').trigger('click');
+});
+
 
 // Tab script for feedback Section
 if(document.getElementById("defaultOpen")){

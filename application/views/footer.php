@@ -102,7 +102,7 @@
                     <a href="<?=base_url('services')?>" class="mr-4 mb-3 d-inline-block text-white">Services</a>
                     <a href="<?=base_url('trainings')?>" class="mr-4 mb-3 d-inline-block text-white">Trainings</a>
                     <!-- <a href="<?=base_url('blog')?>" class="mr-4 mb-3 d-inline-block text-white">Blogs</a> -->
-                    <!-- <a href="<?=base_url('portfolio')?>" class="mr-4 mb-3 d-inline-block text-white">Portfolio</a> -->
+                    <a href="<?=base_url('portfolio')?>" class="mr-4 mb-3 d-inline-block text-white">Portfolio</a>
                     <a href="<?=base_url('contact')?>" class="mr-4 mb-3 d-inline-block text-white">Contact us</a>
                     <a href="<?=base_url('privacy-policy')?>" class="text-white">Privacy Policy</a>
                 </div>

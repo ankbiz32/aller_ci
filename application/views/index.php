@@ -313,15 +313,16 @@
            <div class="row heading">
                <div class="v-line bg-blue"></div>
                <div class="col-sm-5">
-                    <a href="" class="orange-highlight">See all >></a>
+                    <a href="portfolio" class="orange-highlight">See all >></a>
                     <h1 class="lato font-weight-bold">Our recent <span class="orange-highlight">projects</span> </h1>
                </div>
            </div> 
             <div class="owl-carousel owl-theme">
+                <?php foreach($projects as $p){?>
                 <div class="item row">
-                    <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Website developement for IT services firm, Nascent Thoughts</h3>
-                        <small class="">Creative website development for a young and dynamic IT services firm with core competency in Software Services, Web Solutions, Systems Integration and IT Enabled Services. <br> <a href="http://www.nascentthoughts.com" target="_blank">Nascent thoughts</a></small> <br> <br> <br>
+                    <div class="col-md-5 left-col d-flex flex-column justify-content-between ">
+                        <h3 class="lato"><?=$p->title?></h3>
+                        <small class=""><?=$p->short_descr?></small>
                         <div class="row">
                             <div class="col-sm-2 pr-0 pr-sm-2 customNav d-none d-sm-flex flex-column order-sm-0 order-1 mt-sm-0 mt-3">
                                 <!-- <button class="btn custom-up ">
@@ -336,96 +337,17 @@
                                 </button> -->
                             </div>
                             <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/n1.jpg" alt="Nascent thoughts" class="spotlight">
+                                    <img src="<?=base_url()?>assets/portfolio/<?=$p->img_src1?>" alt="" class="imgLeft">
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/n2.jpg" alt="Nascent thoughts" class="imgT spotlight">
-                        <img src="<?=base_url()?>assets/portfolio/n3.jpg" alt="Nascent thoughts" class="mt-sm-5 mt-4 imgB spotlight">
+                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between spotlight-group">
+                        <a href="<?=base_url()?>assets/portfolio/<?=$p->img_src1?>" alt="" class="spotlight invClick" data-in="<?=$p->id?>"></a>
+                        <img src="<?=base_url()?>assets/portfolio/<?=$p->img_src2?>" alt="" class="imgT spotlight">
+                        <img src="<?=base_url()?>assets/portfolio/<?=$p->img_src3?>" alt="" class="mt-sm-5 mt-4 imgB spotlight">
                     </div>
                 </div>
-                <div class="item row ">
-                    <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Bulk SMS & election campaigns</h3>
-                        <small class="">Provided bulk SMS services & election campaign throuh social meadia & facebook marketing for Mr. Shashil G Namoshi (MLC, Karnataka). <br> <a target="_blank" href="https://www.facebook.com/allertechnologies/photos/a.1138316922944046/3202348553207529">See post</a></small> <br> <br> <br>
-                        <div class="row">
-                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-column justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <!-- <button class="btn custom-up ">
-                                    <span class="material-icons">
-                                        expand_less
-                                    </span>
-                                </button>
-                                <button class="btn custom-down">
-                                    <span class="material-icons">
-                                        expand_more
-                                    </span>
-                                </button> -->
-                            </div>
-                            <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/namoshi-election.png" alt="Election campaign" class="spotlight">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/election-campaign.png" alt="Election campaign" class="w-75 imgT spotlight">
-                        <img src="<?=base_url()?>assets/portfolio/bulk-sms.png" alt="Election campaign" class="w-75 mt-sm-5 mt-4 imgB spotlight">
-                    </div>
-                </div>
-                <div class="item row ">
-                    <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Web application</h3>
-                        <small class="">HKE membership web application with super Admin.</small> <br> <br>
-                        <div class="row">
-                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-sm-column flex-row justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <!-- <button class="btn custom-up ">
-                                    <span class="material-icons">
-                                        expand_less
-                                    </span>
-                                </button>
-                                <button class="btn custom-down">
-                                    <span class="material-icons">
-                                        expand_more
-                                    </span>
-                                </button> -->
-                            </div>
-                            <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/61-min.png" class="spotlight" alt="HKE webapp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/41-min.png" alt="HKE webapp" class="w-75 imgT">
-                        <img src="<?=base_url()?>assets/portfolio/21-min.png" alt="HKE webapp" class="w-75 mt-sm-5 mt-4 imgB spotlight">
-                    </div>
-                </div>
-                <div class="item row ">
-                    <div class="col-md-5 left-col d-flex flex-column justify-content-between">
-                        <h3 class="lato">Web application for hospital management</h3>
-                        <small class="">HMS web application with super Admin.</small> <br> <br>
-                        <div class="row">
-                            <div class="col-sm-2 pr-0 pr-sm-2 customNav d-sm-flex d-none flex-sm-column flex-row justify-content-between order-sm-0 order-1 mt-sm-0 mt-3">
-                                <!-- <button class="btn custom-up ">
-                                    <span class="material-icons">
-                                        expand_less
-                                    </span>
-                                </button>
-                                <button class="btn custom-down">
-                                    <span class="material-icons">
-                                        expand_more
-                                    </span>
-                                </button> -->
-                            </div>
-                            <div class="col-sm-10 mb-sm-0 mb-3">
-                                    <img src="<?=base_url()?>assets/portfolio/hms1.png" class="spotlight" alt="HMS webapp">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-md-0 mt-4 right-col d-none d-sm-flex flex-column justify-content-between">
-                        <img src="<?=base_url()?>assets/portfolio/hms2.png" alt="HMS webapp" class="w-75 imgT spotlight">
-                        <img src="<?=base_url()?>assets/portfolio/hms3.png" alt="HMS webapp" class="w-75 mt-sm-5 mt-4 imgB spotlight">
-                    </div>
-                </div>
+                <?php }?>
             </div>
           </div>
        </div>
@@ -433,8 +355,12 @@
 
    <div class="container counts-container">
     <div class="row counts text-center text-white bg-blue flex-nowrap">
-        <div class="col-4 pt-sm-5 pb-sm-5 pt-4 pb-3 px-3">
-             <h1 class="lato mb-4 counter" data-target="124">0</h1>
+        <!-- <div class="col-4 pt-sm-5 pb-sm-5 pt-4 pb-3 px-3">
+             <h1 class="mb-4"><span class="lato counter" data-target="150">0</span</h1>
+             <p>PROJECTS <br> COMPLETED</p>
+        </div> -->
+        <div class="col-4 pt-sm-5 pb-sm-5 pt-4 pb-3 px-3 mid-count">
+             <h1 class="mb-4"><span class="lato counter" data-target="150">0</span>+</h1>
              <p>PROJECTS <br> COMPLETED</p>
         </div>
         <div class="col-4 pt-sm-5 pb-sm-5 pt-4 pb-3 px-3 mid-count">

@@ -89,11 +89,11 @@
                 <span class="">Close</span>
             </div>
             <span class="links-container">
-                <a href="about-us" class="mr-5 text-secondary c-nav-link" >About</a>
-                <a href="services" class="mr-5 text-secondary c-nav-link">Services</a>
-                <a href="portfolio" class="mr-5 text-secondary c-nav-link">Portfolio</a>
-                <a href="trainings" class="mr-5 text-secondary c-nav-link">Trainings</a>
-                <a href="contact" class="text-secondary c-nav-link">Contact</a>
+                <a href="<?=base_url()?>about-us" class="mr-5 text-secondary c-nav-link" >About</a>
+                <a href="<?=base_url()?>services" class="mr-5 text-secondary c-nav-link">Services</a>
+                <a href="<?=base_url()?>portfolio" class="mr-5 text-secondary c-nav-link">Portfolio</a>
+                <a href="<?=base_url()?>trainings" class="mr-5 text-secondary c-nav-link">Trainings</a>
+                <a href="<?=base_url()?>contact" class="text-secondary c-nav-link">Contact</a>
                 <div class="text-center d-sm-none">
                     <a href="<?=$web->fblink?>" target="_blank" class="">
                         <img src="<?=base_url()?>assets/facebook.svg" height="30" alt="Fb">

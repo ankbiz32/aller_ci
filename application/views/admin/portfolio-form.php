@@ -36,7 +36,7 @@
                             <div class="form-group col-md-4">
                                 <label for="img1" class="text-sm mr-2 pt-2">Image 1 <?= isset($data) ? '' : '<span class="text-danger">*</span>' ?> :</label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="img1" name="img1" <?= isset($data) ? '' : 'required' ?>>
+                                    <input type="file" class="custom-file-input" id="img1" accept=".png, .jpg, .jpeg, .gif, .bmp, .svg" name="img1" <?= isset($data) ? '' : 'required' ?>>
                                     <label class="custom-file-label" for="img1">Choose image</label>
                                 </div>
                                 <?php if(isset($data)){?>
@@ -46,7 +46,7 @@
                             <div class="form-group col-md-4">
                                 <label for="img2" class="text-sm mr-2 pt-2">Image 2 <?= isset($data) ? '' : '<span class="text-danger">*</span>' ?> :</label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="img2" name="img2" <?= isset($data) ? '' : 'required' ?>>
+                                    <input type="file" class="custom-file-input" id="img2" accept=".png, .jpg, .jpeg, .gif, .bmp, .svg" name="img2" <?= isset($data) ? '' : 'required' ?>>
                                     <label class="custom-file-label" for="img2">Choose image</label>
                                 </div>
                                 <?php if(isset($data)){?>
@@ -56,7 +56,7 @@
                             <div class="form-group col-md-4">
                                 <label for="img3" class="text-sm mr-2 pt-2">Image 3 <?= isset($data) ? '' : '<span class="text-danger">*</span>' ?> :</label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="img3" name="img3" <?= isset($data) ? '' : 'required' ?>>
+                                    <input type="file" class="custom-file-input" id="img3" accept=".png, .jpg, .jpeg, .gif, .bmp, .svg" name="img3" <?= isset($data) ? '' : 'required' ?>>
                                     <label class="custom-file-label" for="img3">Choose image</label>
                                 </div>
                                 <?php if(isset($data)){?>

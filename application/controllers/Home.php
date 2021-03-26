@@ -15,6 +15,7 @@ class Home extends MY_Controller {
 		$response['feedbacks']=$this->fetch->getInfo('feedbacks');
 		$response['clients']=$this->fetch->getInfo('clients');
 		$response['vid']=$this->fetch->getInfo('video');
+		$response['projects']=$this->fetch->getInfoByLim('portfolio', 3);
 		// var_dump('<pre>',$response);exit;
 		$this->load->view('header',$response);
 		$this->load->view('index');
@@ -63,12 +64,12 @@ class Home extends MY_Controller {
 		$this->load->view('footer');
 	}
 
-	public function project()
+	public function project($id)
 	{
 		$response=array();
 		$response['web']=$this->fetch->getWebProfile('webprofile');
 		$response['clients']=$this->fetch->getInfo('clients');
-		$response['portfolio']=$this->fetch->getInfo('portfolio');
+		$response['project']=$this->fetch->getInfoById($id,'portfolio');
 		$this->load->view('header' , $response);
 		$this->load->view('portfolio');
 		$this->load->view('footer');
