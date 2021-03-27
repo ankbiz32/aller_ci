@@ -98,36 +98,46 @@ class Home extends MY_Controller {
 	
 	public function enquiry(){
 		$this->form_validation->set_rules('name', 'Name', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('some_info_for_sending_this_msg', 'Email', 'required');
 		$this->form_validation->set_rules('message', 'Message', 'required');
 		
-		if($this->form_validation->run() == true){
-			$guest_email=$this->input->post('email');
-			$to = $this->fetch->getWebProfile()->email;
-			
-			$msg ="You have a new enquiry from- \n\r Name:".$this->input->post('name')." \n\r E-mail:".$this->input->post('email')." \n\r  Message:".$this->input->post('message');
-			$subject = "Aller - New Enquiry";
-			$headers = "From:" . $guest_email;
-			// mail($to, $subject, $msg, $headers);
-			mail($to, $subject, $msg);
-			
-			$data = $this->input->post();
-			$this->load->model('AddModel','save');
-			$status= $this->save->saveInfo($data,'enquiries');
-
-			if($status){
-				$this->session->set_flashdata('success','Thank you for sending us a message. Our team will reach out to you shortly.' );
-				redirect('/');
-			}
-			else{
-				$this->session->set_flashdata('failed','Something went wrong. Please try again in some time.' );
-				redirect('/');
-			}
-		
+		if($this->input->post('email')){
+			$this->session->set_flashdata('failed','Some error occured!');
+			redirect('/');
 		}
 		else{
-			$this->session->set_flashdata('failed',strip_tags(validation_errors()));
-			redirect('/');
+			if($this->form_validation->run() == true){
+				$guest_email=$this->input->post('some_info_for_sending_this_msg');
+				$to = $this->fetch->getWebProfile()->email;
+
+				$data = $this->input->post();
+				$data['name']=substr(strip_tags($data['name']),0,50);
+				$data['email']=substr(strip_tags($data['some_info_for_sending_this_msg']),0,50);
+				unset($data['some_info_for_sending_this_msg']);
+				$data['message']=substr(strip_tags($data['message']),0,300);
+				
+				$msg ="You have a new enquiry from- \n\r Name:".$data['name']." \n\r E-mail:".$data['some_info_for_sending_this_msg']." \n\r  Message:".$data['message'];
+				$subject = "Aller - New Enquiry";
+				$headers = "From:" . $guest_email;
+				// mail($to, $subject, $msg, $headers);
+				mail($to, $subject, $msg);
+				$this->load->model('AddModel','save');
+				$status= $this->save->saveInfo($data,'enquiries');
+
+				if($status){
+					$this->session->set_flashdata('success','Thank you for sending us a message. Our team will reach out to you shortly.' );
+					redirect('/');
+				}
+				else{
+					$this->session->set_flashdata('failed','Something went wrong. Please try again in some time.' );
+					redirect('/');
+				}
+			
+			}
+			else{
+				$this->session->set_flashdata('failed',strip_tags(validation_errors()));
+				redirect('/');
+			}
 		}
 	}
 

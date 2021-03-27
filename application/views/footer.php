@@ -58,12 +58,17 @@
                         <h1 class="lato mb-5 text-black">Start a new project</h1>
                         <form class="" action="<?=base_url('Home/enquiry')?>" method="POST">
                             <div class="row justify-content-between flex-sm-nowrap">
+                                
+                                <!-- For security -->
+                                <input name="email" type="hidden"> 
+                                <!-- / For security  -->
+
                                 <div class="col-md-6 mb-sm-0 mb-4 float-group">
                                     <input name="name" type="text" class="" id="name" required>
                                     <label for="name">Name *</label>
                                 </div>
                                 <div class="col-md-6 float-group">
-                                    <input name="email" type="email" id="email" required>
+                                    <input name="some_info_for_sending_this_msg" type="email" id="email" required>
                                     <label for="email">Email *</label>
                                 </div>
                             </div>
