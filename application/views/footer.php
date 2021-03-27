@@ -91,8 +91,8 @@
        <div class="container">
         <div class="row flex-sm-nowrap align-items-center">
             <div class="col-sm-3     text-sm-left text-center">
-                <a href="" class="bg-light d-inline-block py-2 px-4 footer-logo">
-                    <img src="<?=base_url()?>assets/brand/aller_logo.png" height="60" alt="Logo">
+                <a href="" class="bg-light d-inline-block py-2 px-5 footer-logo">
+                    <img src="<?=base_url()?>assets/brand/logo_new.png" height="65" alt="Logo">
                 </a>
             </div>
             <div class="col-sm-9 text-sm-right text-center mt-sm-0 mt-4">
@@ -131,7 +131,7 @@
    </footer>
 
    <div class="float-whatsapp">
-        <a href="https://wa.me/919765718881?text=Hello%2C%0AI%20need%20to%20enquire%20about%20your%20services.">
+        <a target="_blank" href="https://wa.me/919765718881?text=Hello%2C%0AI%20need%20to%20enquire%20about%20your%20services.">
             <img src="<?=base_url()?>assets/whatsapp.svg" alt="">
         </a>
    </div>

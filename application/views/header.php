@@ -73,7 +73,7 @@
 
     <nav class="d-block pt-sm-4 pt-5 pl-5 relative">
         <a href="<?=base_url()?>" class="header-logo-link">
-            <img src="<?=base_url()?>assets/brand/tree.png" class="header-logo" alt="Logo">
+            <img src="<?=base_url()?>assets/brand/logo_new.png" class="header-logo" alt="Logo">
         </a>
         <div class="d-inline-flex d-md-none open-menu-btn float-right mr-4 ">
             <span class="material-icons mr-2">
@@ -89,7 +89,8 @@
                 <span class="">Close</span>
             </div>
             <span class="links-container">
-                <a href="<?=base_url()?>about-us" class="mr-5 text-secondary c-nav-link" >About</a>
+                <!-- <a href="<?=base_url()?>" class="mr-5 text-secondary c-nav-link" ></a> -->
+                <a href="<?=base_url()?>about-us" class="mr-5 ml-5 text-secondary c-nav-link" >About</a>
                 <a href="<?=base_url()?>services" class="mr-5 text-secondary c-nav-link">Services</a>
                 <a href="<?=base_url()?>portfolio" class="mr-5 text-secondary c-nav-link">Portfolio</a>
                 <a href="<?=base_url()?>trainings" class="mr-5 text-secondary c-nav-link">Trainings</a>
@@ -107,7 +108,7 @@
                 </div>
             </span>
             <a href="<?=base_url()?>" class="sidebar_logo d-none">
-                <img src="<?=base_url()?>assets/brand/tree.png" class="header-logo" alt="Logo">
+                <img src="<?=base_url()?>assets/brand/logo_new.png" class="header-logo" alt="Logo">
             </a>
         </div>
     </nav>
