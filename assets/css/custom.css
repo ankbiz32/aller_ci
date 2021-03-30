@@ -274,6 +274,7 @@ a.cta span {
     top: -50px;
     right: 20%;
     background-color: #ccc;
+    z-index:-1;
   }
   section.services .with-head {
     position: relative;
@@ -289,7 +290,7 @@ a.cta span {
             transform: translate(100%, -100%);
     background-color: #fff;
     border-left: 2px solid #ccc;
-    z-index: 1;
+    z-index: -1;
   }
   section.training {
     position: relative;
