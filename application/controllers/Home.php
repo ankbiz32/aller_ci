@@ -115,24 +115,62 @@ class Home extends MY_Controller {
 				$data['email']=substr(strip_tags($data['some_info_for_sending_this_msg']),0,50);
 				unset($data['some_info_for_sending_this_msg']);
 				$data['message']=substr(strip_tags($data['message']),0,300);
-				
-				$msg ="You have a new enquiry from- \n\r Name:".$data['name']." \n\r E-mail:".$data['some_info_for_sending_this_msg']." \n\r  Message:".$data['message'];
-				$subject = "Aller - New Enquiry";
-				$headers = "From:" . $guest_email;
-				// mail($to, $subject, $msg, $headers);
-				mail($to, $subject, $msg);
-				$this->load->model('AddModel','save');
-				$status= $this->save->saveInfo($data,'enquiries');
 
-				if($status){
-					$this->session->set_flashdata('success','Thank you for sending us a message. Our team will reach out to you shortly.' );
+				// Regex for filtering spam words
+				preg_match('/(http|www|ftp|mailto|porn|nude|sex|click|hot)/', $data['message'], $matches);
+
+				if($matches){
+					$this->session->set_flashdata('failed','Some error occured!');
 					redirect('/');
 				}
 				else{
-					$this->session->set_flashdata('failed','Something went wrong. Please try again in some time.' );
-					redirect('/');
+
+					$url = "https://www.google.com/recaptcha/api/siteverify";
+					$load = [
+						'secret' => RECAPTCHA_SECRET_KEY,
+						'response' => $_POST['token'],
+						// 'remoteip' => $_SERVER['REMOTE_ADDR']
+					];
+
+					$opt = array(
+						'http' => array(
+						'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+						'method'  => 'POST',
+						'content' => http_build_query($load)
+						)
+					);
+
+					$context  = stream_context_create($opt);
+					$resp = file_get_contents($url, false, $context);
+
+					$res = json_decode($resp, true);
+					if($res['success'] == true) {
+						unset($data['token']);
+						$msg ="You have a new enquiry from- \n\r Name:".$data['name']." \n\r E-mail:".$data['some_info_for_sending_this_msg']." \n\r  Message:".$data['message'];
+						$subject = "Aller Tech - New Enquiry";
+						$headers = "From:" . $guest_email;
+						// mail($to, $subject, $msg, $headers);
+						mail($to, $subject, $msg);
+						$this->load->model('AddModel','save');
+						$status= $this->save->saveInfo($data,'enquiries');
+	
+						if($status){
+							$this->session->set_flashdata('success','Thank you for sending us a message. Our team will reach out to you shortly.' );
+							redirect('/');
+						}
+						else{
+							$this->session->set_flashdata('failed','Something went wrong. Please try again in some time.' );
+							redirect('/');
+						}
+					}
+					else {
+						$this->session->set_flashdata('failed','Some error occured!');
+						redirect('/');
+					}
+
+
+				
 				}
-			
 			}
 			else{
 				$this->session->set_flashdata('failed',strip_tags(validation_errors()));

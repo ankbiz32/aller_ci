@@ -2,6 +2,7 @@
   font-family: 'Sintony','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 html{
   scroll-behavior: smooth;
 }
@@ -1600,4 +1601,9 @@ a.cta span {
   .this_project img.cubeL {
     display: none;
   }
+}
+
+
+.grecaptcha-badge{
+  display: none !important;
 }

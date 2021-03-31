@@ -43,6 +43,7 @@
     <link href="<?=base_url()?>assets/css/float_label.css" rel="stylesheet" type="text/css"/>
     <link href="<?=base_url()?>assets/css/custom.css" rel="stylesheet" type="text/css" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?=RECAPTCHA_SITE_KEY?>"></script>
     
     <div id="fb-root"></div>
       <script>

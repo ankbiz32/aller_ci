@@ -61,6 +61,7 @@
                                 
                                 <!-- For security -->
                                 <input name="email" type="hidden"> 
+                                <input name="token" id="token" type="hidden"> 
                                 <!-- / For security  -->
 
                                 <div class="col-md-6 mb-sm-0 mb-4 float-group">
@@ -151,6 +152,12 @@
     <script src="<?=base_url()?>assets/js/app.js"></script>
     
     <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('<?=RECAPTCHA_SITE_KEY?>', {action: 'homepage'}).then(function(token) {
+                document.getElementById("token").value = token;
+            });
+        });
+        
         var base_url = '<?=base_url()?>';
         $(document).ready(function(){
             const Toast = Swal.mixin({

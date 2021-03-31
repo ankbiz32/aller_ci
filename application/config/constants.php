@@ -85,5 +85,7 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 // Custom Constants
+defined('RECAPTCHA_SITE_KEY')      OR define('RECAPTCHA_SITE_KEY', '6LeUOpYaAAAAAP_Rrvf6rcJmkjNNFrqI2T-Imdu5'); // Google reCaptcha site key (digikraftsocial@gmail.com)
+defined('RECAPTCHA_SECRET_KEY')      OR define('RECAPTCHA_SECRET_KEY', '6LeUOpYaAAAAADqmNyglnUgJZI30L_4v9nDWQc8o'); // Google reCaptcha secret key (digikraftsocial@gmail.com)
 defined('ROOT_PWD')      OR define('ROOT_PWD', '502Ank'); // Root login password
 defined('APP_NAME')      OR define('APP_NAME', 'Aller'); // Root login password
