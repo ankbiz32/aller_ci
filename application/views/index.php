@@ -21,7 +21,7 @@
                              <path id="Polygon_4" data-name="Polygon 4" d="M11.25,0,22.5,18H0Z" transform="translate(65.5 41.5) rotate(90)" fill="#fff"/>
                          </svg>
                      </a>
-                     <img src="<?=base_url()?>assets/vid-thumb.png" class="w-100" style="object-fit: cover; object-position: center;" alt="">
+                     <img src="<?=base_url()?>assets/vid-thumb.png" class="w-100" style="object-fit: cover; object-position: center; height:100%; position:absolute" alt="">
                  </div>
            </div>
            <div class="row mt-sm-5 mt-3 header-cards">
